@@ -1,8 +1,8 @@
 
-qcsharpsquid:S3903".Move 'SceneController' into a named namespace.(·”›éJ$e2a7f75c-95eb-48c4-a2ba-df2593d41f7b
-‡csharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(ñ¯èĞJ$6a9a4a85-debf-4541-8634-411a28a6e382
+qcsharpsquid:S3903".Move 'SceneController' into a named namespace.(·”›éJ$56880dbd-082c-4484-aa2a-2e64d65ccd54
+‡csharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(ñ¯èĞJ$0ce7888d-2275-4d86-9c15-325b18c025e6
 ‡csharpsquid:S1104
-"DMake this field 'private' and encapsulate it in a 'public' property.(»ˆ©ÊJ$eb065865-8601-48f6-84db-e84fb9cca60a
-Œcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Õ€¡¿øÿÿÿÿJ$10c841bf-5d0e-4705-a079-ffe9b191b14b
-ˆcsharpsquid:S2223	"EChange the visibility of 'instance' or make it 'const' or 'readonly'.(ñ¯èĞJ$1e918ecb-c710-4225-b831-31274687eb25
-csharpsquid:S2696"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(ñõîÙşÿÿÿÿJ$c208aaf6-79b4-4afe-b659-95bcc9c3ecc8
+"DMake this field 'private' and encapsulate it in a 'public' property.(»ˆ©ÊJ$494b508d-fabd-4a8d-8709-9857ea844098
+Œcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Õ€¡¿øÿÿÿÿJ$d5bd0f82-2f73-4b80-a172-3c28a7b75efe
+ˆcsharpsquid:S2223	"EChange the visibility of 'instance' or make it 'const' or 'readonly'.(ñ¯èĞJ$de81098c-40b9-4350-849c-6b7b8fe47059
+csharpsquid:S2696"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(ñõîÙşÿÿÿÿJ$4d5768ed-2a06-42ad-ba47-ed64fc3d4235
