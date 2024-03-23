@@ -1,0 +1,5 @@
+
+Gcsharpsquid:S1125S"*Remove the unnecessary Boolean literal(s).(ªóÄ©
+ocsharpsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 51 to the 15 allowed.(èà€å
+Acsharpsquid:S3903"$Move 'Sheep' into a named namespace.(‚˘å„
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(£ô„º

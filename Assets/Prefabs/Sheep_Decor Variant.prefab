@@ -68,6 +68,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_Decor Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2365422026088251025, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8236021560012363737, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
         type: 3}
       propertyPath: m_FlipX
