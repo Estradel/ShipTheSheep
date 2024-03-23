@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
@@ -29,9 +30,18 @@ public class Sheep : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 force = Vector3.zero;
+        
+        Vector3 shepherdForce = Vector3.zero;
+        Vector3 flockCenter = Vector3.zero;
+        Vector3 avoidanceForce = Vector3.zero;
+        Vector3 averageVelocity = Vector3.zero;
+        int numNeighborsFlockCenter = 0;
+        int numNeighborsAvoidOthers = 0;
+        int numNeighborsAverageVelocity = 0;
+        
         // Flees from the shepherds
         foreach (Shepherd shepherd in shepherds)
         {
@@ -39,22 +49,11 @@ public class Sheep : MonoBehaviour
             float distance = direction.magnitude;
             if (distance < 10)
             {
-                force += direction.normalized * (10 - distance);
+                shepherdForce += direction.normalized * (10 - distance);
             }
         }
-        // Applies the force
-        rb.velocity = Vector3.zero;
-        force.y = 0;
 
 
-
-
-        Vector3 flockCenter = Vector3.zero;
-        Vector3 avoidanceForce = Vector3.zero;
-        Vector3 averageVelocity = Vector3.zero;
-        int numNeighbors = 0;
-        int numNeighborsAvoidOthers = 0;
-        int numNeighborsAverageVelocity = 0;
 
         foreach (Sheep sheep in gameController.Sheeps)
         {
@@ -63,9 +62,14 @@ public class Sheep : MonoBehaviour
             {
                 continue;
             }
-            // Fly towards the center of the flock
-            flockCenter += sheep.transform.position;
-            
+
+            // Go the center of the flock
+            if (Vector3.Distance(transform.position, sheep.transform.position) < PerceptionRadius)
+            {
+                flockCenter += sheep.transform.position;
+                numNeighborsFlockCenter++;
+            }
+
             // Avoid others
             if (Vector3.Distance(transform.position, sheep.transform.position) < SeparationDistance)
             {
@@ -80,29 +84,31 @@ public class Sheep : MonoBehaviour
                 numNeighborsAverageVelocity++;
             }
             
-            numNeighbors++;
         }
+
+        force += shepherdForce;
         
-        if (numNeighbors > 0)
+        if (numNeighborsFlockCenter > 0)
         {
-            flockCenter /= numNeighbors;
-            averageVelocity /= numNeighborsAverageVelocity;
-            avoidanceForce /= numNeighborsAvoidOthers;
+            flockCenter /= numNeighborsFlockCenter;
             force += (flockCenter - transform.position) * 0.1f;
+        }
+
+        if (numNeighborsAverageVelocity > 0)
+        {
+            averageVelocity /= numNeighborsAverageVelocity;
+            //force += (averageVelocity - rb.velocity) * 0.01f;
+
+        }
+        if (numNeighborsAvoidOthers > 0) {
+            avoidanceForce /= numNeighborsAvoidOthers;
             force += avoidanceForce * 0.1f;
-            force += (averageVelocity - rb.velocity) * 0.1f;
         }
         
-        
-
-
-
-
-
-
-        Debug.Log(force);
-        // Rotation should be pointed to the direction of the force
+        force.y = 0;
         transform.localRotation = quaternion.RotateY(Mathf.Atan2(force.x, force.z));
-        rb.velocity += force.normalized * 5;
+        rb.AddForce(force.normalized * 10);
+        // clamp velocity
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, 10);
     }
 }
