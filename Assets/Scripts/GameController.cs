@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -18,6 +19,8 @@ public class GameController : MonoBehaviour
     public float ShepherdVelocity = 10f;
     public float SheepVelocity = 5f;
 
+    public static State STATE = State.Pause;
+
 
     // Not Serializable
     [System.NonSerialized] public List<Shepherd> Shepherds;
@@ -30,6 +33,7 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        STATE = State.Pause;
         Shepherds = new List<Shepherd>();
         GameObject[] shepherdObjects = GameObject.FindGameObjectsWithTag("Shepherd");
         foreach (GameObject shepherdObject in shepherdObjects)
@@ -39,7 +43,6 @@ public class GameController : MonoBehaviour
 
         Sheeps = new List<Sheep>();
         GameObject[] sheepObjects = GameObject.FindGameObjectsWithTag("Sheep");
-        Debug.Log(sheepObjects.Length);
         foreach (GameObject sheepObject in sheepObjects)
         {
             Sheeps.Add(sheepObject.GetComponent<Sheep>());
@@ -50,6 +53,10 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        if (GameController.STATE == State.Pause)
+        {
+            return;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -76,7 +83,6 @@ public class GameController : MonoBehaviour
 
                         selectedShepherd = raycastHit.transform.gameObject.GetComponent<Shepherd>();
                         selectedShepherd.Select();
-                        hasTouchedShepherd = true;
                         return;
                     }
 

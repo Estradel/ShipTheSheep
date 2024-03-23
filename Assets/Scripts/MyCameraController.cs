@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 public class MyCameraController : MonoBehaviour
@@ -17,6 +18,10 @@ public class MyCameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameController.STATE == State.Pause)
+        {
+            return;
+        }
         // Can pan the camera with drag and drop
         if (Input.GetMouseButton(0) || Input.GetMouseButton(2) || Input.GetMouseButton(1))
         {
