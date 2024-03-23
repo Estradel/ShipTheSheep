@@ -168,6 +168,6 @@ public class LevelController : MonoBehaviour
     public void AddConfinedSheep()
     {
         GameController gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-        sheepCounterText.text = gameController.Sheeps.Where(sheep => !sheep.isConfined).Count() + "";
+        // sheepCounterText.text = gameController.Sheeps.Where(sheep => !sheep.isConfined).Count() + "";
     }
 }
