@@ -76,3 +76,7 @@ crashlytics-build.properties
 .vscode/launch.json
 
 .vscode/settings.json
+
+Assets/Terrainkibug.asset
+
+Assets/Terrainkibug.asset.meta
