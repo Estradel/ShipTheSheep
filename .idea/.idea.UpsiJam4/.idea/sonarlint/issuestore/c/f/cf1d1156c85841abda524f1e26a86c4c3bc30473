@@ -1,7 +1,7 @@
 
-rcsharpsquid:S3903")Move 'GAME_STATE' into a named namespace.(øì¡x8£ÏƒÖæ1J$11397b3a-5ae0-4a78-a909-9a08dce8b6c7
-mcsharpsquid:S3903"*Move 'GameManager' into a named namespace.(¬øõJ$e6326dae-4d40-40e3-b2b1-24fd3380db2d
-Ácsharpsquid:S1186'"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(ûàîºûÿÿÿÿJ$6e01133b-5498-4b14-bdeb-b85c8fd7b3dc
-Ácsharpsquid:S1186,"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(®±®“üÿÿÿÿJ$1d943d25-fc5f-437c-b75a-c5b31cded936
-¨csharpsquid:S2342"_Rename this enumeration to match the regular expression: '^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$'.(øì¡x8¥ÏƒÖæ1J$cb00ef60-a1aa-4ffe-b87d-407302706675
-“csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(±÷¿úÿÿÿÿ8±ò•åæ1J$dc21bea9-1456-4ba1-83d5-c3d66f50a81f
+Lcsharpsquid:S3903")Move 'GAME_STATE' into a named namespace.(øì¡x8–Ğ–íæ1
+Ncsharpsquid:S3903"*Move 'GameManager' into a named namespace.(¬øõ8–Ğ–íæ1
+¢csharpsquid:S1186!"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(…“şÌşÿÿÿÿ8˜Ğ–íæ1
+¢csharpsquid:S1186&"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(é¼”²şÿÿÿÿ8˜Ğ–íæ1
+‚csharpsquid:S2342"_Rename this enumeration to match the regular expression: '^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$'.(øì¡x8™Ğ–íæ1
+hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(øˆÚ­8™Ğ–íæ1

@@ -1,6 +1,5 @@
 
-qcsharpsquid:S3903".Move 'LevelDescriptor' into a named namespace.(¤ò…°J$d6666d3e-556d-4469-b495-557fd3b3126c
-“csharpsquid:S1104
-"DMake this field 'private' and encapsulate it in a 'public' property.(¸…Ëôùÿÿÿÿ8°Ö‘åæ1J$317c4d77-4201-45f7-9339-8852d9934280
-csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¨ßÒE8­ù‘åæ1J$8952ef8a-7b53-4ff3-ac7f-266d912e38fe
-mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Œ¡Üøÿÿÿÿ8¶ğöéæ1
+Rcsharpsquid:S3903".Move 'LevelDescriptor' into a named namespace.(¤ò…°8ğÎ–íæ1
+mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¸…Ëôùÿÿÿÿ8ñÎ–íæ1
+gcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¨ßÒE8ñÎ–íæ1
+hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Ù€’™8ñÎ–íæ1
