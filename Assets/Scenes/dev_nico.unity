@@ -1071,7 +1071,7 @@ GameObject:
   - component: {fileID: 1101553400}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1359,11 +1359,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4263218572980666631, guid: 6a791c58875e34931bd28a99ff5ccc18,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1644,7 +1639,7 @@ PrefabInstance:
     - target: {fileID: 4245581730136697543, guid: 6a791c58875e34931bd28a99ff5ccc18,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.58
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 4245581730136697543, guid: 6a791c58875e34931bd28a99ff5ccc18,
         type: 3}
@@ -1654,7 +1649,7 @@ PrefabInstance:
     - target: {fileID: 4245581730136697543, guid: 6a791c58875e34931bd28a99ff5ccc18,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.24
+      value: 15.24
       objectReference: {fileID: 0}
     - target: {fileID: 4245581730136697543, guid: 6a791c58875e34931bd28a99ff5ccc18,
         type: 3}
@@ -1758,11 +1753,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep
-      objectReference: {fileID: 0}
-    - target: {fileID: 4184288544776113894, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 116
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
