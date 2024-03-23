@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     public static SceneController instance;
+    public GameObject mainMenu;
+    public GameObject selectionMenu;
 
     private void Awake()
     {
@@ -19,11 +21,22 @@ public class SceneController : MonoBehaviour
         instance = this;
     }
 
-    public void PlayGame()
+    public void LevelSelection()
     {
-        SceneManager.LoadScene("OutdoorScene");
+        mainMenu.SetActive(false);
+        selectionMenu.SetActive(true);
     }
 
+    public void LoadLevel(string level)
+    {
+        SceneManager.LoadScene(level);
+    }
+
+    public void BackToMain()
+    {
+        selectionMenu.SetActive(false);
+        mainMenu.SetActive(true);
+    }
 
     public void QuitGame()
     {
