@@ -1,25 +1,20 @@
-using System;
 using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
-using Vector3 = UnityEngine.Vector3;
-using Vector2 = UnityEngine.Vector2;
-using Random = UnityEngine.Random;
 
 public class Sheep : MonoBehaviour
 {
-    private GameController gameController;
-    private List<Shepherd> shepherds;
-    private Rigidbody rb;
+    public bool isConfined;
     private Animator animator;
-    
-    private Nullable<Vector3> targetPosition;
-    private float idleTimer = 0;
+    private GameController gameController;
+    private float idleTimer;
+    private Rigidbody rb;
+    private List<Shepherd> shepherds;
 
-    public bool isConfined = false;
+    private Vector3? targetPosition;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
         shepherds = gameController.Shepherds;
@@ -29,17 +24,14 @@ public class Sheep : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        if (GameController.STATE == State.Pause)
-        {
-            return;
-        }
+        if (GameController.STATE == State.Pause) return;
         if (isConfined)
         {
             if (targetPosition.HasValue)
             {
-                Vector3 direction = targetPosition.Value - transform.position;
+                var direction = targetPosition.Value - transform.position;
                 rb.velocity = direction.normalized * gameController.ShepherdVelocity;
                 animator.SetBool("IsRunning", true);
                 if (Vector3.Distance(transform.position, targetPosition.Value) < 0.8f)
@@ -56,46 +48,42 @@ public class Sheep : MonoBehaviour
                 idleTimer -= Time.fixedDeltaTime;
                 if (idleTimer <= 0)
                 {
-                    Vector2 insideUnitCircle = Random.insideUnitCircle;
+                    var insideUnitCircle = Random.insideUnitCircle;
                     targetPosition = new Vector3(
-                        gameController.confinedDetector.transform.position.x + (insideUnitCircle.x) * gameController.confinedDetector.transform.localScale.x / 2f,
-                        this.transform.position.y,
-                        gameController.confinedDetector.transform.position.z + (insideUnitCircle.y) * gameController.confinedDetector.transform.localScale.z / 2f);
+                        gameController.confinedDetector.transform.position.x + insideUnitCircle.x *
+                        gameController.confinedDetector.transform.localScale.x / 2f,
+                        transform.position.y,
+                        gameController.confinedDetector.transform.position.z + insideUnitCircle.y *
+                        gameController.confinedDetector.transform.localScale.z / 2f);
                 }
             }
         }
         else // If not confined
         {
-            Vector3 force = Vector3.zero;
+            var force = Vector3.zero;
 
-            Vector3 shepherdForce = Vector3.zero;
-            Vector3 flockCenter = Vector3.zero;
-            Vector3 avoidanceForce = Vector3.zero;
-            Vector3 averageVelocity = Vector3.zero;
-            int numNeighborsFlockCenter = 0;
-            int numNeighborsAvoidOthers = 0;
-            int numNeighborsAverageVelocity = 0;
+            var shepherdForce = Vector3.zero;
+            var flockCenter = Vector3.zero;
+            var avoidanceForce = Vector3.zero;
+            var averageVelocity = Vector3.zero;
+            var numNeighborsFlockCenter = 0;
+            var numNeighborsAvoidOthers = 0;
+            var numNeighborsAverageVelocity = 0;
 
             // Flees from the shepherds
-            foreach (Shepherd shepherd in shepherds)
+            foreach (var shepherd in shepherds)
             {
-                Vector3 direction = transform.position - shepherd.transform.position;
-                float distance = direction.magnitude;
+                var direction = transform.position - shepherd.transform.position;
+                var distance = direction.magnitude;
                 if (distance < gameController.ShepherdPerceptionRadius)
-                {
                     shepherdForce += direction.normalized * (gameController.ShepherdPerceptionRadius - distance);
-                }
             }
 
 
             if (shepherdForce == Vector3.zero || true) // Only align when no shepherd (a bit more chaotic)
-            {
-                foreach (Sheep sheep in gameController.Sheeps)
+                foreach (var sheep in gameController.Sheeps)
                 {
-                    if (sheep == this || sheep.isConfined)
-                    {
-                        continue;
-                    }
+                    if (sheep == this || sheep.isConfined) continue;
 
                     // Go the center of the flock
                     if (Vector3.Distance(transform.position, sheep.transform.position) <
@@ -121,7 +109,6 @@ public class Sheep : MonoBehaviour
                         numNeighborsAverageVelocity++;
                     }
                 }
-            }
 
             force += shepherdForce;
 
@@ -146,13 +133,9 @@ public class Sheep : MonoBehaviour
             force.y = 0;
             rb.velocity += force;
             if (rb.velocity.magnitude > 0.5)
-            {
                 animator.SetBool("IsRunning", true);
-            }
             else
-            {
                 animator.SetBool("IsRunning", false);
-            }
 
             // clamp velocity
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, gameController.SheepVelocity);

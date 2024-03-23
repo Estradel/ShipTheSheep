@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +8,7 @@ public class SceneController : MonoBehaviour
     public GameObject selectionMenu;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         instance = this;
     }
@@ -21,12 +18,9 @@ public class SceneController : MonoBehaviour
         mainMenu.SetActive(false);
         selectionMenu.SetActive(true);
 
-        LevelSelectionDescriptor[] levelSelectionDescriptors =
+        var levelSelectionDescriptors =
             FindObjectsByType<LevelSelectionDescriptor>(FindObjectsSortMode.None);
-        foreach (LevelSelectionDescriptor descriptor in levelSelectionDescriptors)
-        {
-            descriptor.RefreshScore();
-        }
+        foreach (var descriptor in levelSelectionDescriptors) descriptor.RefreshScore();
     }
 
     public void LoadLevel(string level)

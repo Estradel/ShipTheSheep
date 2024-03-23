@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SheepBehaviour : MonoBehaviour
@@ -23,7 +21,7 @@ public class SheepBehaviour : MonoBehaviour
     private RandomSfx _randomSfx;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _randomSfx = GetComponent<RandomSfx>();
         SetIdle();

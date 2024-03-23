@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour
@@ -10,13 +7,14 @@ public class SaveManager : MonoBehaviour
     private void Awake()
     {
         if (Instance != null && Instance != this)
-        {
             Destroy(this);
-        }
         else
-        {
             Instance = this;
-        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.Save();
     }
 
     public void SaveScoreForLevel(string levelName, int score)
@@ -27,7 +25,6 @@ public class SaveManager : MonoBehaviour
 
     public int GetScoreForLevel(string levelName)
     {
-
         // Get the score for the level
         return PlayerPrefs.GetInt(levelName, 0);
     }
@@ -40,10 +37,5 @@ public class SaveManager : MonoBehaviour
     public void ResetAllScores()
     {
         PlayerPrefs.DeleteAll();
-    }
-
-    private void OnApplicationQuit()
-    {
-        PlayerPrefs.Save();
     }
 }
