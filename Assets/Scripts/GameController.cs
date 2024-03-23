@@ -6,6 +6,8 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public static GameController Instance { get; private set; }
+    
+    private Shepherd selectedShepherd;
 
     // Not Serializable
     [System.NonSerialized]
@@ -45,6 +47,39 @@ public class GameController : MonoBehaviour
         foreach (GameObject sheepObject in sheepObjects)
         {
             Sheeps.Add(sheepObject.GetComponent<Sheep>());
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit raycastHit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out raycastHit, 100f))
+            {
+                if (raycastHit.transform != null)
+                {
+                    if (raycastHit.transform.gameObject.CompareTag("Shepherd"))
+                    {
+                        selectedShepherd = raycastHit.transform.gameObject.GetComponent<Shepherd>();
+                        selectedShepherd.Select();
+                    }
+                    if (raycastHit.transform.gameObject.CompareTag("Terrain"))
+                    {
+                        Debug.Log("Terrain");
+                        if (selectedShepherd != null)
+                        {
+                            selectedShepherd.Move(raycastHit.point);
+                        }
+                    }
+                }
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            selectedShepherd = null;
         }
     }
 }

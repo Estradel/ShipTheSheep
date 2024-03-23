@@ -91,13 +91,13 @@ public class Sheep : MonoBehaviour
         if (numNeighborsFlockCenter > 0)
         {
             flockCenter /= numNeighborsFlockCenter;
-            force += (flockCenter - transform.position) * 0.1f;
+            force += (flockCenter - transform.position) * 0.01f;
         }
 
         if (numNeighborsAverageVelocity > 0)
         {
             averageVelocity /= numNeighborsAverageVelocity;
-            //force += (averageVelocity - rb.velocity) * 0.01f;
+            force += averageVelocity * 0.1f;
 
         }
         if (numNeighborsAvoidOthers > 0) {
@@ -106,8 +106,8 @@ public class Sheep : MonoBehaviour
         }
         
         force.y = 0;
-        transform.localRotation = quaternion.RotateY(Mathf.Atan2(force.x, force.z));
-        rb.AddForce(force.normalized * 10);
+        rb.velocity += force;
+        transform.localRotation = quaternion.RotateY(Mathf.Atan2(rb.velocity.x, rb.velocity.z));
         // clamp velocity
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, 10);
     }
