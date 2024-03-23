@@ -44,5 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f6200fdae714f988047603bcd44932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shepherds: []
-  Sheeps: []
+  confinedDetector: {fileID: 0}
+  PerceptionRadius: 10
+  SeparationDistance: 1
+  ShepherdPerceptionRadius: 10
+  FlocCenterForce: 0.01
+  MatchVelocityForce: 0.1
+  AvoidanceForce: 0.1
+  ShepherdVelocity: 10
+  SheepVelocity: 5

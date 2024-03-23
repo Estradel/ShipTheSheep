@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2318949477847255968}
   - component: {fileID: 4184288544776113894}
   - component: {fileID: 5288890133525319625}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sheep
   m_TagString: Sheep
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 8572677492513460313}
   - component: {fileID: 783719689390669815}
   - component: {fileID: 970141246655686973}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SheepBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,8 +104,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2318949477847255968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -172,7 +172,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 8236021560012363737}
   - component: {fileID: 8631507469828026652}
   - component: {fileID: 717669322250795508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SheepRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 7103379010956506670}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.38, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
