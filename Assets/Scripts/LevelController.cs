@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] private float timeToComplete = 90;
     [SerializeField] private float timeRemaining = 0;
     [SerializeField] private TMP_Text timeText;
+    [SerializeField] private TMP_Text sheepCounterText;
     [SerializeField] private AudioClip introMusic;
     [SerializeField] private AudioClip levelMusic;
     [SerializeField] private AudioClip winMusic;
@@ -117,10 +119,22 @@ public class LevelController : MonoBehaviour
         // mySequence.PrependInterval(1);
         // // Insert a scale tween for the whole duration of the Sequence
         // mySequence.Insert(0, transform.DOScale(new Vector3(3,3,3), mySequence.Duration()));
+        
+        
+        // Total sheeps
+        GameController gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+        sheepCounterText.text = gameController.Sheeps.Where(sheep => !sheep.isConfined).Count() + "";
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    public void AddConfinedSheep()
+    {
+        GameController gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+        sheepCounterText.text = gameController.Sheeps.Where(sheep => !sheep.isConfined).Count() + "";
     }
 }

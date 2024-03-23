@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 {
     private Shepherd selectedShepherd;
     public ConfinedDetector confinedDetector;
+    
 
     public float PerceptionRadius = 10f;
     public float SeparationDistance = 1f;
@@ -21,10 +22,10 @@ public class GameController : MonoBehaviour
     // Not Serializable
     [System.NonSerialized] public List<Shepherd> Shepherds;
     [System.NonSerialized] public List<Sheep> Sheeps;
+    [System.NonSerialized] public LevelController levelController;
 
     private void Awake()
     {
-        Debug.Log("Awake2");
     }
 
     private void Start()
@@ -43,6 +44,8 @@ public class GameController : MonoBehaviour
         {
             Sheeps.Add(sheepObject.GetComponent<Sheep>());
         }
+
+        levelController = GameObject.FindGameObjectWithTag("LevelController").GetComponent<LevelController>();
     }
 
     private void Update()
