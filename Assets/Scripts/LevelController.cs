@@ -9,10 +9,15 @@ public class LevelController : MonoBehaviour
     [Header("Level Infos")] [SerializeField]
     private LevelDescriptor levelDescriptor;
 
+    [SerializeField] public bool isLevelSatisfactory = false;
+    [SerializeField] private GameObject btnBackSatisfactory;
+
+
     [SerializeField] private float timeRemaining;
 
     [Header("LevelScreen")] [SerializeField]
     private GameObject levelUI;
+    
 
     [SerializeField] private TMP_Text timeText;
 
@@ -55,7 +60,14 @@ public class LevelController : MonoBehaviour
         _audioSource.clip = introMusic;
         _audioSource.Play();
 
-        // StartLevel();
+        if (isLevelSatisfactory)
+        {
+            introGameObject.SetActive(false);
+            levelUI.SetActive(false);
+            endScreen.SetActive(false);
+            StartLevel();
+        }
+
     }
 
     // Update is called once per frame
@@ -65,16 +77,28 @@ public class LevelController : MonoBehaviour
 
     public void StartLevel()
     {
-        timeRemaining = levelDescriptor.timeToComplete;
+        
         _audioSource.clip = levelMusic;
         _audioSource.Play();
+        GameController.STATE = State.Play;
 
+        if (isLevelSatisfactory)
+        {
+            introGameObject.SetActive(false);
+            levelUI.SetActive(false);
+            endScreen.SetActive(false);
+            btnBackSatisfactory.SetActive(true);
+            return;
+        }
+        
+        timeRemaining = levelDescriptor.timeToComplete;
         introGameObject.SetActive(false);
         levelUI.SetActive(true);
         endScreen.SetActive(false);
+        
+
 
         _timeOfDayController.StartDay(levelDescriptor.timeToComplete);
-        GameController.STATE = State.Play;
 
         DOTween.To(() => timeRemaining, x => timeRemaining = x, 0, levelDescriptor.timeToComplete).SetEase(Ease.Linear)
             .OnUpdate(() =>
