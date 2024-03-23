@@ -9,6 +9,7 @@ public class Shepherd : MonoBehaviour
     private Rigidbody rb;
     private GameController gameController;
     private Animator animator;
+    public SpriteRenderer spriteSelected;
     
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,14 @@ public class Shepherd : MonoBehaviour
     public void Select()
     {
         // Play sound ouaf
+        animator.SetBool("IsSelected", true);
+        spriteSelected.enabled = true;
+    }
+    
+    public void UnSelect()
+    {
+        animator.SetBool("IsSelected", false);
+        spriteSelected.enabled = false;
     }
 
     public void Move(Vector3 targetPosition)
