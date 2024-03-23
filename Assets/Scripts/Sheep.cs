@@ -105,7 +105,7 @@ public class Sheep : MonoBehaviour
         rb.velocity += force;
         if (rb.velocity.magnitude > 0.5)
         {
-            transform.localRotation = quaternion.RotateY(Mathf.Atan2(rb.velocity.x, rb.velocity.z));
+            //transform.localRotation = quaternion.RotateY(Mathf.Atan2(rb.velocity.x, rb.velocity.z));
         }
         // clamp velocity
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, gameController.SheepVelocity);
