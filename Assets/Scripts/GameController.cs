@@ -6,7 +6,8 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     private Shepherd selectedShepherd;
-    
+    public ConfinedDetector confinedDetector;
+
     public float PerceptionRadius = 10f;
     public float SeparationDistance = 1f;
     public float ShepherdPerceptionRadius = 10f;
@@ -15,15 +16,13 @@ public class GameController : MonoBehaviour
     public float AvoidanceForce = 0.1f;
     public float ShepherdVelocity = 10f;
     public float SheepVelocity = 5f;
-    
+
 
     // Not Serializable
-    [System.NonSerialized]
-    public List<Shepherd> Shepherds;
-    [System.NonSerialized]
-    public List<Sheep> Sheeps;
+    [System.NonSerialized] public List<Shepherd> Shepherds;
+    [System.NonSerialized] public List<Sheep> Sheeps;
 
-    private void Awake() 
+    private void Awake()
     {
         Debug.Log("Awake2");
     }
@@ -36,7 +35,7 @@ public class GameController : MonoBehaviour
         {
             Shepherds.Add(shepherdObject.GetComponent<Shepherd>());
         }
-        
+
         Sheeps = new List<Sheep>();
         GameObject[] sheepObjects = GameObject.FindGameObjectsWithTag("Sheep");
         Debug.Log(sheepObjects.Length);
@@ -50,9 +49,9 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit raycastHit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out raycastHit, 100f))
+            RaycastHit[] raycastHits = Physics.RaycastAll(ray, 100f);
+            foreach (RaycastHit raycastHit in raycastHits)
             {
                 if (raycastHit.transform != null)
                 {
@@ -60,7 +59,9 @@ public class GameController : MonoBehaviour
                     {
                         selectedShepherd = raycastHit.transform.gameObject.GetComponent<Shepherd>();
                         selectedShepherd.Select();
+                        break;
                     }
+
                     if (raycastHit.transform.gameObject.CompareTag("Terrain"))
                     {
                         Debug.Log("Terrain");
