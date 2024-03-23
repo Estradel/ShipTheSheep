@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4245581730136697543}
   - component: {fileID: 4263218572980666631}
   - component: {fileID: 8497055311324542078}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shepherd
   m_TagString: Shepherd
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 5723769342174520506}
   - component: {fileID: 902641609022750446}
   - component: {fileID: 7588649941407061454}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShepherdBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 3712078878584264040}
   - component: {fileID: 4179019147666866112}
   - component: {fileID: 1265813458058335856}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShepherdRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

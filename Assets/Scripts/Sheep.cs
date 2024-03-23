@@ -60,8 +60,8 @@ public class Sheep : MonoBehaviour
                     Vector2 insideUnitCircle = Random.insideUnitCircle;
                     targetPosition = new Vector3(
                         gameController.confinedDetector.transform.position.x + (insideUnitCircle.x) * gameController.confinedDetector.transform.localScale.x / 2f,
-                        0,
-                        gameController.confinedDetector.transform.position.z + (insideUnitCircle.y) * gameController.confinedDetector.transform.localScale.z) / 2f;
+                        this.transform.position.y,
+                        gameController.confinedDetector.transform.position.z + (insideUnitCircle.y) * gameController.confinedDetector.transform.localScale.z / 2f);
                 }
             }
         }
@@ -89,7 +89,7 @@ public class Sheep : MonoBehaviour
             }
 
 
-            if (shepherdForce == Vector3.zero) // Only align when no shepherd (a bit more chaotic)
+            if (shepherdForce == Vector3.zero || true) // Only align when no shepherd (a bit more chaotic)
             {
                 foreach (Sheep sheep in gameController.Sheeps)
                 {
@@ -164,10 +164,11 @@ public class Sheep : MonoBehaviour
     {
         if (!isConfined)
         {
+            gameController.levelController.AddConfinedSheep();
             isConfined = true;
             rb.velocity = Vector3.zero;
             animator.SetBool("IsRunning", false);
-            idleTimer = Random.Range(2, 10);
+            idleTimer = 0;
         }
     }
 }
