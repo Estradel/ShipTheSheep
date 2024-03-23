@@ -9,4 +9,5 @@ public class LevelDescriptor : ScriptableObject
 {
     public string levelName = "OutdoorScene";
     public float timeToComplete = 90;
+    public int scoreToBeat = 0;
 }
