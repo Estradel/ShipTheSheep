@@ -54,20 +54,34 @@ public class GameController : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] raycastHits = Physics.RaycastAll(ray, 100f);
+            bool hasTouchedShepherd = false;
+            foreach (RaycastHit raycastHit in raycastHits)
+            {
+                
+                if (raycastHit.transform != null && raycastHit.transform.gameObject.CompareTag("Shepherd"))
+                {
+                    hasTouchedShepherd = true;
+                }
+            }
             foreach (RaycastHit raycastHit in raycastHits)
             {
                 if (raycastHit.transform != null)
                 {
                     if (raycastHit.transform.gameObject.CompareTag("Shepherd"))
                     {
+                        if (selectedShepherd != null)
+                        {
+                            selectedShepherd.UnSelect();
+                        }
+
                         selectedShepherd = raycastHit.transform.gameObject.GetComponent<Shepherd>();
                         selectedShepherd.Select();
-                        break;
+                        hasTouchedShepherd = true;
+                        return;
                     }
 
-                    if (raycastHit.transform.gameObject.CompareTag("Terrain"))
+                    if (raycastHit.transform.gameObject.CompareTag("Terrain") && !hasTouchedShepherd)
                     {
-                        Debug.Log("Terrain");
                         if (selectedShepherd != null)
                         {
                             selectedShepherd.Move(raycastHit.point);
@@ -79,6 +93,7 @@ public class GameController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
+            selectedShepherd.UnSelect();
             selectedShepherd = null;
         }
     }

@@ -1,0 +1,5 @@
+
+Mcsharpsquid:S3903")Move 'Transition' into a named namespace.(¹¾ËÍ8»Áàãæ1
+csharpsquid:S1450
+"XRemove the field 'm_overlay' and declare it as a local variable in the relevant methods.(‡™¼úÿÿÿÿ8¼Áàãæ1
+ycsharpsquid:S2696"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(“ê³8¼Áàãæ1
