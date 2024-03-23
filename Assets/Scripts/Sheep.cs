@@ -10,12 +10,6 @@ using Quaternion = UnityEngine.Quaternion;
 
 public class Sheep : MonoBehaviour
 {
-
-    public float PerceptionRadius = 10f;
-    public float SeparationDistance = 2f;
-    
-    
-    
     private GameController gameController;
     private List<Shepherd> shepherds;
     private Rigidbody rb;
@@ -23,7 +17,7 @@ public class Sheep : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameController = GameController.Instance;
+        gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
         shepherds = gameController.Shepherds;
         
         rb = GetComponent<Rigidbody>();
@@ -49,41 +43,43 @@ public class Sheep : MonoBehaviour
             float distance = direction.magnitude;
             if (distance < 10)
             {
-                shepherdForce += direction.normalized * (10 - distance);
+                shepherdForce += direction.normalized * (gameController.ShepherdPerceptionRadius - distance);
             }
         }
 
 
-
-        foreach (Sheep sheep in gameController.Sheeps)
+        if (shepherdForce == Vector3.zero) // Only align when no shepherd (a bit more chaotic)
         {
-            // TODO if sheep is still in game
-            if (sheep == this)
+            foreach (Sheep sheep in gameController.Sheeps)
             {
-                continue;
-            }
+                // TODO if sheep is still in game
+                if (sheep == this)
+                {
+                    continue;
+                }
 
-            // Go the center of the flock
-            if (Vector3.Distance(transform.position, sheep.transform.position) < PerceptionRadius)
-            {
-                flockCenter += sheep.transform.position;
-                numNeighborsFlockCenter++;
-            }
+                // Go the center of the flock
+                if (Vector3.Distance(transform.position, sheep.transform.position) < gameController.PerceptionRadius)
+                {
+                    flockCenter += sheep.transform.position;
+                    numNeighborsFlockCenter++;
+                }
 
-            // Avoid others
-            if (Vector3.Distance(transform.position, sheep.transform.position) < SeparationDistance)
-            {
-                avoidanceForce += (transform.position - sheep.transform.position).normalized;
-                numNeighborsAvoidOthers++;
+                // Avoid others
+                if (Vector3.Distance(transform.position, sheep.transform.position) < gameController.SeparationDistance)
+                {
+                    avoidanceForce += (transform.position - sheep.transform.position).normalized;
+                    numNeighborsAvoidOthers++;
+                }
+
+                // Match velocity
+                if (Vector3.Distance(transform.position, sheep.transform.position) < gameController.PerceptionRadius)
+                {
+                    averageVelocity += sheep.rb.velocity;
+                    numNeighborsAverageVelocity++;
+                }
+
             }
-            
-            // Match velocity
-            if (Vector3.Distance(transform.position, sheep.transform.position) < PerceptionRadius)
-            {
-                averageVelocity += sheep.rb.velocity;
-                numNeighborsAverageVelocity++;
-            }
-            
         }
 
         force += shepherdForce;
@@ -91,24 +87,27 @@ public class Sheep : MonoBehaviour
         if (numNeighborsFlockCenter > 0)
         {
             flockCenter /= numNeighborsFlockCenter;
-            force += (flockCenter - transform.position) * 0.01f;
+            force += (flockCenter - transform.position) * gameController.FlocCenterForce;
         }
 
         if (numNeighborsAverageVelocity > 0)
         {
             averageVelocity /= numNeighborsAverageVelocity;
-            force += averageVelocity * 0.1f;
+            force += averageVelocity * gameController.MatchVelocityForce;
 
         }
         if (numNeighborsAvoidOthers > 0) {
             avoidanceForce /= numNeighborsAvoidOthers;
-            force += avoidanceForce * 0.1f;
+            force += avoidanceForce * gameController.AvoidanceForce;
         }
         
         force.y = 0;
         rb.velocity += force;
-        transform.localRotation = quaternion.RotateY(Mathf.Atan2(rb.velocity.x, rb.velocity.z));
+        if (rb.velocity.magnitude > 0.5)
+        {
+            transform.localRotation = quaternion.RotateY(Mathf.Atan2(rb.velocity.x, rb.velocity.z));
+        }
         // clamp velocity
-        rb.velocity = Vector3.ClampMagnitude(rb.velocity, 10);
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, gameController.SheepVelocity);
     }
 }
