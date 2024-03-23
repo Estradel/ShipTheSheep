@@ -28,23 +28,23 @@ public class MyCameraController : MonoBehaviour
         else // If the mouse is near the screen border, pan in this direction
         {
             Vector3 translation = Vector3.zero;
-            if (Input.mousePosition.x < 10)
+            if (Input.mousePosition.x < 50)
             {
-                translation.x = -1;
+                translation.x = -1 * 2;
             }
-            else if (Input.mousePosition.x > Screen.width - 10)
+            else if (Input.mousePosition.x > Screen.width - 50)
             {
-                translation.x = 1;
+                translation.x = 1 * 2;
             }
-            if (Input.mousePosition.y < 10)
+            if (Input.mousePosition.y < 50)
             {
                 translation.z = -1;
             }
-            else if (Input.mousePosition.y > Screen.height - 10)
+            else if (Input.mousePosition.y > Screen.height - 50)
             {
                 translation.z = 1;
             }
-            //transform.Translate(translation / 2);
+            transform.Translate(translation / 2);
         }
         // Zoom out and in with the mouse wheel at the cursor position
         if (Input.mouseScrollDelta.y != 0)
