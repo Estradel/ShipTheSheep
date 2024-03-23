@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using System.Threading;
+using DefaultNamespace;
 using Unity.Mathematics;
 using Unity.Properties;
 using UnityEngine;
@@ -36,6 +37,10 @@ public class Sheep : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (GameController.STATE == State.Pause)
+        {
+            return;
+        }
         if (isConfined)
         {
             if (targetPosition.HasValue)
@@ -164,11 +169,11 @@ public class Sheep : MonoBehaviour
     {
         if (!isConfined)
         {
-            gameController.levelController.AddConfinedSheep();
             isConfined = true;
             rb.velocity = Vector3.zero;
             animator.SetBool("IsRunning", false);
             idleTimer = 0;
+            gameController.levelController.AddConfinedSheep();
         }
     }
 }

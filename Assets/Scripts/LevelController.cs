@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DefaultNamespace;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -17,7 +18,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] private TMP_Text timeText;
 
     [Header("IntroScreen")]
-    [SerializeField] private TMP_Text sheepCounterText;
+    [SerializeField] private TMP_Text sheepCounterLeftText;
     [SerializeField] private GameObject introGameObject;
 
     private AudioSource _audioSource;
@@ -25,7 +26,8 @@ public class LevelController : MonoBehaviour
     private bool isLastSeconds = false;
 
     [Header("EndScreen")] [SerializeField] private GameObject endScreen;
-    [SerializeField] private TMP_Text endSheepCounter;
+    [SerializeField] private TMP_Text endSheepCounterText;
+    [SerializeField] private TMP_Text endSheepCounterTotalText;
     [SerializeField] private GameObject winTitle;
     [SerializeField] private GameObject loseTitle;
     [SerializeField] private GameObject endButtons;
@@ -35,11 +37,16 @@ public class LevelController : MonoBehaviour
     [SerializeField] private AudioClip levelMusic;
     [SerializeField] private AudioClip winMusic;
     [SerializeField] private AudioClip loseMusic;
+
+
+    private GameController gameController;
+
     // Start is called before the first frame update
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
         _timeOfDayController = GetComponent<TimeOfDayController>();
+        gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 
         introGameObject.SetActive(true);
         levelUI.SetActive(false);
@@ -62,6 +69,7 @@ public class LevelController : MonoBehaviour
         endScreen.SetActive(false);
 
         _timeOfDayController.StartDay(levelDescriptor.timeToComplete);
+        GameController.STATE = State.Play;
 
         DOTween.To(() => timeRemaining, x => timeRemaining = x, 0, levelDescriptor.timeToComplete).SetEase(Ease.Linear).OnUpdate(() =>
         {
@@ -82,14 +90,23 @@ public class LevelController : MonoBehaviour
             timeText.DOKill();
             timeText.transform.DOKill();
 
-            // TODO Check if Lose or Win
-
-            ShowEndScreen(false, 100);
+            ShowEndScreen();
         });
+        
+        // Total sheeps
+        sheepCounterLeftText.text = gameController.Sheeps.Count(sheep => !sheep.isConfined) + "";
+        Debug.Log(sheepCounterLeftText.text);
     }
 
-    private void ShowEndScreen(bool win, int nbSheep)
+    private void ShowEndScreen()
     {
+        GameController.STATE = State.Pause;
+        bool win = gameController.Sheeps.Count(sheep => !sheep.isConfined) == 0;
+        int nbSheep = gameController.Sheeps.Count(sheep => sheep.isConfined);
+        int totalSheep = gameController.Sheeps.Count();
+        
+        endSheepCounterTotalText.text = "/ " + totalSheep;
+        
         _audioSource.Stop();
         introGameObject.SetActive(false);
         levelUI.SetActive(false);
@@ -97,19 +114,18 @@ public class LevelController : MonoBehaviour
         endButtons.SetActive(false);
         winTitle.SetActive(false);
         loseTitle.SetActive(false);
+        
 
         // Grab a free Sequence to use
         Sequence mySequence = DOTween.Sequence();
         // Add a movement tween at the beginning
-        mySequence.Append(endSheepCounter.DOCounter(0, nbSheep, 5, false).OnComplete(() =>
+        mySequence.Append(endSheepCounterText.DOCounter(0, nbSheep, 3, false).OnComplete(() =>
         {
             if (win)
             {
                 winTitle.SetActive(true);
                 _audioSource.clip = winMusic;
                 _audioSource.Play();
-
-                SaveManager.Instance.SaveScoreForLevel(levelDescriptor.levelName, nbSheep);
             }
             else
             {
@@ -117,6 +133,7 @@ public class LevelController : MonoBehaviour
                 _audioSource.clip = loseMusic;
                 _audioSource.Play();
             }
+            SaveManager.Instance.SaveScoreForLevel(levelDescriptor.levelName, nbSheep);
 
             endButtons.SetActive(true);
         }));
@@ -129,9 +146,8 @@ public class LevelController : MonoBehaviour
         // mySequence.Insert(0, transform.DOScale(new Vector3(3,3,3), mySequence.Duration()));
         
         
-        // Total sheeps
-        GameController gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-        sheepCounterText.text = gameController.Sheeps.Where(sheep => !sheep.isConfined).Count() + "";
+
+        
     }
 
     // Update is called once per frame
@@ -159,6 +175,11 @@ public class LevelController : MonoBehaviour
     {
         GameManager.Instance.LoadScene(levelDescriptor.levelName);
     }
+    
+    public void Back()
+    {
+        GameManager.Instance.LoadScene("StartScreen");
+    }
 
     public void QuitGame()
     {
@@ -167,7 +188,12 @@ public class LevelController : MonoBehaviour
 
     public void AddConfinedSheep()
     {
-        GameController gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-        // sheepCounterText.text = gameController.Sheeps.Where(sheep => !sheep.isConfined).Count() + "";
+        Debug.Log("AddConfined");
+        Debug.Log(gameController.Sheeps.Where(sheep => !sheep.isConfined).Count());
+        if (gameController.Sheeps.Where(sheep => !sheep.isConfined).Count() == 0)
+        {
+            ShowEndScreen();
+        }
+        sheepCounterLeftText.text = gameController.Sheeps.Where(sheep => !sheep.isConfined).Count() + "";
     }
 }

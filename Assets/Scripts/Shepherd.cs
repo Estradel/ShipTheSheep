@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 public class Shepherd : MonoBehaviour
@@ -22,7 +23,10 @@ public class Shepherd : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        if (GameController.STATE == State.Pause)
+        {
+            return;
+        }   
         
         if (targetPosition.HasValue)
         {
