@@ -10,11 +10,6 @@ public class SceneController : MonoBehaviour
     public GameObject mainMenu;
     public GameObject selectionMenu;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
-
     // Start is called before the first frame update
     void Start()
     {

@@ -1,0 +1,12 @@
+
+Mcsharpsquid:S3903"+Move 'UIController' into a named namespace.(ëŞÏüÿÿÿÿ
+›csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(…“şÌşÿÿÿÿ
+›csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(é¼”²şÿÿÿÿ
+Jcsharpsquid:S1089")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ø¡—‹ÿÿÿÿÿ
+gcsharpsquid:S2223"EChange the visibility of 'Instance' or make it 'const' or 'readonly'.(ø¡—‹ÿÿÿÿÿ
+rcsharpsquid:S2696"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(Ä“±Ï
+@csharpsquid:S125@"Remove this commented out code.(Éóÿÿÿÿÿ
+@csharpsquid:S125M"Remove this commented out code.(Éóÿÿÿÿÿ
+@csharpsquid:S125l"Remove this commented out code.(…¡ì™şÿÿÿÿ
+;csharpsquid:S125v"Remove this commented out code.(™‡öÂ
