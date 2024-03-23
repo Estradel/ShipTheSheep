@@ -1,5 +1,0 @@
-
-ucsharpsquid:S3903"-Move 'GameController' into a named namespace.(Ü×Á‰ýÿÿÿÿJ$8f825e3f-3c57-4bae-9475-e939a48c6171
-“csharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(ïÔÜ³ûÿÿÿÿ8©÷°Äæ1J$dd505fe8-b839-4aa2-b5e5-b29a6b958d83
-”csharpsquid:S2223	"EChange the visibility of 'instance' or make it 'const' or 'readonly'.(ïÔÜ³ûÿÿÿÿ8«÷°Äæ1J$7f773ca2-e0e1-4a27-b463-55a8fc849e7c
-¤csharpsquid:S2696"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(ñõîÙþÿÿÿÿ8¨º±Äæ1J$ea3cf01b-4b19-4563-bc7d-465a210e356b
