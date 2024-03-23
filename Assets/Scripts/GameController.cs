@@ -5,9 +5,17 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public static GameController Instance { get; private set; }
-    
     private Shepherd selectedShepherd;
+    
+    public float PerceptionRadius = 10f;
+    public float SeparationDistance = 1f;
+    public float ShepherdPerceptionRadius = 10f;
+    public float FlocCenterForce = 0.01f;
+    public float MatchVelocityForce = 0.1f;
+    public float AvoidanceForce = 0.1f;
+    public float ShepherdVelocity = 10f;
+    public float SheepVelocity = 5f;
+    
 
     // Not Serializable
     [System.NonSerialized]
@@ -18,18 +26,6 @@ public class GameController : MonoBehaviour
     private void Awake() 
     {
         Debug.Log("Awake2");
-        // If there is an instance, and it's not me, delete myself.
-    
-        if (Instance != null && Instance != this) 
-        { 
-            Destroy(this);
-        } 
-        else 
-        { 
-            Instance = this;
-        }
-        
-        
     }
 
     private void Start()
