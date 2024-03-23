@@ -62,7 +62,7 @@ public class GameController : MonoBehaviour
                     {
                         selectedShepherd = raycastHit.transform.gameObject.GetComponent<Shepherd>();
                         selectedShepherd.Select();
-                        break;
+                        return;
                     }
 
                     if (raycastHit.transform.gameObject.CompareTag("Terrain"))
@@ -79,6 +79,7 @@ public class GameController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
+            selectedShepherd.UnSelect();
             selectedShepherd = null;
         }
     }
