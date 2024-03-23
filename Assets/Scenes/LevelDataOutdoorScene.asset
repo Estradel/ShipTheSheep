@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LevelDataOutdoorScene
   m_EditorClassIdentifier: 
   levelName: OutdoorScene
-  timeToComplete: 90
+  timeToComplete: 3

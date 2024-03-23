@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
@@ -43,5 +43,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        Transition.LoadLevel(sceneName, 1, Color.black);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

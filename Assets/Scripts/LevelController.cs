@@ -131,4 +131,29 @@ public class LevelController : MonoBehaviour
     void Update()
     {
     }
+
+    public void LoadScene(string sceneName)
+    {
+        GameManager.Instance.LoadScene(sceneName);
+    }
+
+    public void LoadLevel(LevelDescriptor nextLevel)
+    {
+        GameManager.Instance.LoadScene(nextLevel.levelName);
+    }
+
+    public void NextLevel(LevelDescriptor nextLevel)
+    {
+        GameManager.Instance.LoadScene(nextLevel.levelName);
+    }
+
+    public void RetryLevel()
+    {
+        GameManager.Instance.LoadScene(levelDescriptor.levelName);
+    }
+
+    public void QuitGame()
+    {
+        GameManager.Instance.QuitGame();
+    }
 }
