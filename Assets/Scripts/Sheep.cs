@@ -139,6 +139,13 @@ public class Sheep : MonoBehaviour
 
             // clamp velocity
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, gameController.SheepVelocity);
+
+            if (gameController.levelController.isLevelSatisfactory)
+            {
+                var direction = new Vector3(15, 0, 0) - transform.position;
+                direction.y = 0;
+                rb.velocity += direction.normalized * 0.3f;
+            }
         }
     }
 
