@@ -8,13 +8,14 @@ public class Shepherd : MonoBehaviour
     private Nullable<Vector3> targetPosition;
     private Rigidbody rb;
     private GameController gameController;
-    
+    private Animator animator;
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -32,6 +33,15 @@ public class Shepherd : MonoBehaviour
                 transform.position = targetPosition.Value;
                 targetPosition = null;
             }
+        }
+        
+        if (rb.velocity.magnitude > 0.5)
+        {
+            animator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            animator.SetBool("IsRunning", false);
         }
     }
 

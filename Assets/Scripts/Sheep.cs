@@ -13,6 +13,7 @@ public class Sheep : MonoBehaviour
     private GameController gameController;
     private List<Shepherd> shepherds;
     private Rigidbody rb;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class Sheep : MonoBehaviour
         shepherds = gameController.Shepherds;
         
         rb = GetComponent<Rigidbody>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -105,7 +107,11 @@ public class Sheep : MonoBehaviour
         rb.velocity += force;
         if (rb.velocity.magnitude > 0.5)
         {
-            //transform.localRotation = quaternion.RotateY(Mathf.Atan2(rb.velocity.x, rb.velocity.z));
+            animator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            animator.SetBool("IsRunning", false);
         }
         // clamp velocity
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, gameController.SheepVelocity);
