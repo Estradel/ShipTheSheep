@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5342423324422784742}
   - component: {fileID: 8382912784858138210}
   - component: {fileID: 1013190033409190310}
+  - component: {fileID: 7491856549054003331}
   m_Layer: 0
   m_Name: Damaged3 WoodStraightFence
   m_TagString: Untagged
@@ -101,8 +102,29 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 849838794362615549, guid: 5da863e5e1df69146ab519406b42bb4f, type: 3}
+--- !u!65 &7491856549054003331
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6764158399024885919}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.224697, y: 1.6881825, z: 0.26951262}
+  m_Center: {x: -0.005057156, y: 0.580803, z: 0.041805413}
