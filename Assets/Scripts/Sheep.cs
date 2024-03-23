@@ -1,15 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
-using System.Threading;
 using DefaultNamespace;
-using Unity.Mathematics;
-using Unity.Properties;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 using Vector2 = UnityEngine.Vector2;
-using Quaternion = UnityEngine.Quaternion;
 using Random = UnityEngine.Random;
 
 public class Sheep : MonoBehaviour
