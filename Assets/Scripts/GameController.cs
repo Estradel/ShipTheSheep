@@ -1,13 +1,13 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    private Shepherd selectedShepherd;
+    public static State STATE = State.Pause;
     public ConfinedDetector confinedDetector;
-    
+
 
     public float PerceptionRadius = 10f;
     public float SeparationDistance = 1f;
@@ -17,12 +17,13 @@ public class GameController : MonoBehaviour
     public float AvoidanceForce = 0.1f;
     public float ShepherdVelocity = 10f;
     public float SheepVelocity = 5f;
+    [NonSerialized] public LevelController levelController;
+    private Shepherd selectedShepherd;
+    [NonSerialized] public List<Sheep> Sheeps;
 
 
     // Not Serializable
-    [System.NonSerialized] public List<Shepherd> Shepherds;
-    [System.NonSerialized] public List<Sheep> Sheeps;
-    [System.NonSerialized] public LevelController levelController;
+    [NonSerialized] public List<Shepherd> Shepherds;
 
     private void Awake()
     {
@@ -30,65 +31,45 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        STATE = State.Pause;
         Shepherds = new List<Shepherd>();
-        GameObject[] shepherdObjects = GameObject.FindGameObjectsWithTag("Shepherd");
-        foreach (GameObject shepherdObject in shepherdObjects)
-        {
-            Shepherds.Add(shepherdObject.GetComponent<Shepherd>());
-        }
+        var shepherdObjects = GameObject.FindGameObjectsWithTag("Shepherd");
+        foreach (var shepherdObject in shepherdObjects) Shepherds.Add(shepherdObject.GetComponent<Shepherd>());
 
         Sheeps = new List<Sheep>();
-        GameObject[] sheepObjects = GameObject.FindGameObjectsWithTag("Sheep");
-        Debug.Log(sheepObjects.Length);
-        foreach (GameObject sheepObject in sheepObjects)
-        {
-            Sheeps.Add(sheepObject.GetComponent<Sheep>());
-        }
+        var sheepObjects = GameObject.FindGameObjectsWithTag("Sheep");
+        foreach (var sheepObject in sheepObjects) Sheeps.Add(sheepObject.GetComponent<Sheep>());
 
         levelController = GameObject.FindGameObjectWithTag("LevelController").GetComponent<LevelController>();
     }
 
     private void Update()
     {
+        if (STATE == State.Pause) return;
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit[] raycastHits = Physics.RaycastAll(ray, 100f);
-            bool hasTouchedShepherd = false;
-            foreach (RaycastHit raycastHit in raycastHits)
-            {
-                
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            var raycastHits = Physics.RaycastAll(ray, 100f);
+            var hasTouchedShepherd = false;
+            foreach (var raycastHit in raycastHits)
                 if (raycastHit.transform != null && raycastHit.transform.gameObject.CompareTag("Shepherd"))
-                {
                     hasTouchedShepherd = true;
-                }
-            }
-            foreach (RaycastHit raycastHit in raycastHits)
-            {
+            foreach (var raycastHit in raycastHits)
                 if (raycastHit.transform != null)
                 {
                     if (raycastHit.transform.gameObject.CompareTag("Shepherd"))
                     {
-                        if (selectedShepherd != null)
-                        {
-                            selectedShepherd.UnSelect();
-                        }
+                        if (selectedShepherd != null) selectedShepherd.UnSelect();
 
                         selectedShepherd = raycastHit.transform.gameObject.GetComponent<Shepherd>();
                         selectedShepherd.Select();
-                        hasTouchedShepherd = true;
                         return;
                     }
 
                     if (raycastHit.transform.gameObject.CompareTag("Terrain") && !hasTouchedShepherd)
-                    {
                         if (selectedShepherd != null)
-                        {
                             selectedShepherd.Move(raycastHit.point);
-                        }
-                    }
                 }
-            }
         }
 
         if (Input.GetMouseButtonDown(1))

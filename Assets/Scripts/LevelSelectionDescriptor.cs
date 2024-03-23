@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 
@@ -12,7 +11,7 @@ public class LevelSelectionDescriptor : MonoBehaviour
 
     public void RefreshScore()
     {
-        int score = SaveManager.Instance.GetScoreForLevel(LevelDescriptor.levelName);
+        var score = SaveManager.Instance.GetScoreForLevel(LevelDescriptor.levelName);
         scoreText.text = score.ToString();
     }
 

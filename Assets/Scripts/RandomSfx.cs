@@ -1,15 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(AudioSource))]
 public class RandomSfx : MonoBehaviour
 {
+    public AudioClip[] sfxClips;
 
     private AudioSource _audioSource;
-    public AudioClip[] sfxClips;
 
     private void Awake()
     {
@@ -17,15 +13,13 @@ public class RandomSfx : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
     }
 
     public void PlayRandomSfx()
@@ -36,7 +30,7 @@ public class RandomSfx : MonoBehaviour
 
     public void PlayRandomSfxNow()
     {
-        int randomIndex = Random.Range(0, sfxClips.Length);
+        var randomIndex = Random.Range(0, sfxClips.Length);
         _audioSource.PlayOneShot(sfxClips[randomIndex]);
     }
 

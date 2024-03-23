@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,35 +12,30 @@ public enum GAME_STATE
 
 public class GameManager : MonoBehaviour
 {
+    public List<LevelDescriptor> levels = new();
     public static GameManager Instance { get; private set; }
-
-    public List<LevelDescriptor> levels = new List<LevelDescriptor>();
 
     public GAME_STATE GameState { get; private set; }
 
     private void Awake()
     {
         if (Instance != null && Instance != this)
-        {
-            Destroy(this.gameObject);
-        }
+            Destroy(gameObject);
         else
-        {
             Instance = this;
-        }
 
         GameState = GAME_STATE.MENU;
 
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
     }
 

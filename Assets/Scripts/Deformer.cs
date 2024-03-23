@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Deformer : MonoBehaviour
 {
-    private MeshRenderer meshRenderer;
     private MeshFilter meshFilter;
+    private MeshRenderer meshRenderer;
     private Vector3[] vertices;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
         meshFilter = GetComponent<MeshFilter>();
@@ -21,10 +19,10 @@ public class Deformer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // Get Mouse Position in world space
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Debug.Log("mousePos = " + mousePos);
         // Vector3 localMousePos = transform.InverseTransformPoint(mousePos);
         // Debug.Log("localMousePos = " + localMousePos);
