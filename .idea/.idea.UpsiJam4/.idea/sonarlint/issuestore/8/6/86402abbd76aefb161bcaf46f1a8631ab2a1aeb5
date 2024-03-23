@@ -1,0 +1,8 @@
+
+qcsharpsquid:S3903".Move 'SceneController' into a named namespace.(·”›éJ$0dabf055-9009-43a2-a964-f16e959b33e4
+‡csharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(ñ¯èĞJ$afd6e791-9b87-4250-9585-0f78e4ef2b2c
+‡csharpsquid:S1104
+"DMake this field 'private' and encapsulate it in a 'public' property.(»ˆ©ÊJ$5be3d7bf-69f0-41b5-ace4-bf0012ac4c85
+Œcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Õ€¡¿øÿÿÿÿJ$4675da90-474e-44f4-bb17-92ea42c4a6d5
+ˆcsharpsquid:S2223	"EChange the visibility of 'instance' or make it 'const' or 'readonly'.(ñ¯èĞJ$62e25fda-3095-4b47-aa84-23b94b5b199f
+csharpsquid:S2696"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(ñõîÙşÿÿÿÿJ$a9308987-4f2e-4a53-b6bf-fe3d071aaa2c

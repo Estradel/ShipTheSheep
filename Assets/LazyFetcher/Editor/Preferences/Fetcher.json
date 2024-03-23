@@ -1,20 +1,20 @@
 {
-    "LastServer": "Local",
-    "LastItem": "Rock",
-    "LastItemType": "Round4",
+    "LastServer": "Main",
+    "LastItem": "",
+    "LastItemType": "",
     "Servers_Type": [
-        1
+        0
     ],
     "ServersId": [
         "Main"
     ],
     "ServersSrc": [
-        "C:\\Users\\antoine.lestrade\\Documents\\Projets\\UnityAssets"
+        "wafflesgama/LazyFetcherLibrary"
     ],
     "ServersBranch": [
         "main"
     ],
-    "PropCol": true,
+    "PropCol": false,
     "PropRb": false,
     "PageSize": 20
 }

@@ -1,0 +1,6 @@
+
+tcsharpsquid:S37765"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(é¼”²þÿÿÿÿ
+Ocsharpsquid:S3903"-Move 'GameController' into a named namespace.(Ü×Á‰ýÿÿÿÿ
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(Æ‹Ùë
+acsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(˜ã†Å
+Lcsharpsquid:S1066="/Merge this if statement with the enclosing one.(¬ÿŽµ
