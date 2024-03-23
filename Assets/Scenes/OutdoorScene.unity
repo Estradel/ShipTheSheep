@@ -1269,7 +1269,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: b6a880502bd7e3a46bed408c1f9b587a, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 0572fbd501416e44abb76f6cefe45c34, type: 2}
 --- !u!4 &1160234427
 Transform:
   m_ObjectHideFlags: 0
@@ -2114,12 +2114,12 @@ PrefabInstance:
     - target: {fileID: 1387790648515663263, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.022103237
+      value: 0.022103274
       objectReference: {fileID: 0}
     - target: {fileID: 1387790648515663263, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.005213051
+      value: -0.00521306
       objectReference: {fileID: 0}
     - target: {fileID: 5888467317744381472, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
@@ -2181,6 +2181,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelController
       objectReference: {fileID: 0}
+    - target: {fileID: 7991038974062052496, guid: c4ccad883a601454f88dc42fa98ffdab,
+        type: 3}
+      propertyPath: levelDescriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: 79564b488ead7574c89ec21f9ae3f193,
+        type: 2}
     - target: {fileID: 8672419550882933360, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: _sun

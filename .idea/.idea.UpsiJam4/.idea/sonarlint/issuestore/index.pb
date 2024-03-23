@@ -13,3 +13,13 @@ Q
 !Assets/Scripts/LevelController.cs,7\7\7748741266679e572abf25ccac2d2a8cd7c8b79f
 U
 %Assets/Scripts/TimeOfDayController.cs,d\5\d5b8150b99632bf5ef8d7d1da2867e89bfb84a6d
+M
+Assets/Scripts/SaveManager.cs,3\a\3a426b8117027ea23a23742340365cb367792fc0
+Q
+!Assets/Scripts/SceneTransition.cs,1\6\16e5f34a9e1312d5875fc9e9cbda285570d34347
+L
+Assets/Scripts/Transition.cs,d\6\d603e929a8a10e9cea55ef3e1c104279f88110b7
+Z
+*Assets/Scripts/LevelSelectionDescriptor.cs,f\f\ff4f47cadb6e089d890a9ae0e559d35493c9b9c2
+Q
+!Assets/Scripts/LevelDescriptor.cs,d\a\dafb795949e12015872fe233f3061a6b4cca5f32

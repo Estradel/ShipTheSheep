@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    public List<LevelDescriptor> levels = new List<LevelDescriptor>();
+
     public GAME_STATE GameState { get; private set; }
 
     private void Awake()

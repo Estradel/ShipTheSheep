@@ -20,6 +20,13 @@ public class SceneController : MonoBehaviour
     {
         mainMenu.SetActive(false);
         selectionMenu.SetActive(true);
+
+        LevelSelectionDescriptor[] levelSelectionDescriptors =
+            FindObjectsByType<LevelSelectionDescriptor>(FindObjectsSortMode.None);
+        foreach (LevelSelectionDescriptor descriptor in levelSelectionDescriptors)
+        {
+            descriptor.RefreshScore();
+        }
     }
 
     public void LoadLevel(string level)
@@ -37,6 +44,4 @@ public class SceneController : MonoBehaviour
     {
         Application.Quit();
     }
-
-
 }

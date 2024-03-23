@@ -1,8 +1,8 @@
 
-rcsharpsquid:S1125?"*Remove the unnecessary Boolean literal(s).(›Æ¼¦ÿÿÿÿÿJ$b9dc3717-c5fb-44d3-afc6-3b05d41a876d
-vcsharpsquid:S3903".Move 'LevelController' into a named namespace.(ð«²´ÿÿÿÿÿJ$84458a0c-4d3a-477c-b01b-66770eaec795
-Ácsharpsquid:S1186{"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(®±®“üÿÿÿÿJ$930dff08-bb40-4685-a305-91611aae2fc3
-hcsharpsquid:S125+"Remove this commented out code.(•Ž–ð8ÅÆŽÛæ1J$42109f23-0e64-4243-8c78-c92de92d3dde
-fcsharpsquid:S125<"Remove this commented out code.(¿é¦‘üÿÿÿÿJ$fd8b5908-2a02-4332-ae10-562f1876b4bd
-mcsharpsquid:S125s"Remove this commented out code.(ß±³ëúÿÿÿÿ8Ç«¾Úæ1J$707441aa-0ebe-4944-a1d9-eacc0a37cd56
-ƒcsharpsquid:S1135M"4Complete the task associated to this 'TODO' comment.(ÂÔ°¤úÿÿÿÿ8£Õ›Úæ1J$c6f01895-d77a-4c24-9d2e-4dc871711b68
+rcsharpsquid:S1125E"*Remove the unnecessary Boolean literal(s).(›Æ¼¦ÿÿÿÿÿJ$26d33744-f102-495d-bcbf-ce549a4fc083
+vcsharpsquid:S3903".Move 'LevelController' into a named namespace.(ð«²´ÿÿÿÿÿJ$a8d60f74-0da0-46b8-a684-e05ee99ff424
+Âcsharpsquid:S1186ƒ"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(®±®“üÿÿÿÿJ$3af7cf6a-0b6c-48fe-9392-dc39295de35e
+hcsharpsquid:S1251"Remove this commented out code.(•Ž–ð8ÅÆŽÛæ1J$992e2ad3-c43d-42d1-863b-3f767da82b71
+fcsharpsquid:S125B"Remove this commented out code.(¿é¦‘üÿÿÿÿJ$5bf1024f-d397-4bba-abce-4c1f9144c346
+mcsharpsquid:S125{"Remove this commented out code.(ß±³ëúÿÿÿÿ8Ç«¾Úæ1J$c2a36a67-26ed-4900-a4f5-d9f191b600e1
+ƒcsharpsquid:S1135S"4Complete the task associated to this 'TODO' comment.(ÂÔ°¤úÿÿÿÿ8£Õ›Úæ1J$590c8342-ccd3-40a9-b70e-5b65d2fb9572
