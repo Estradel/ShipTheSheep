@@ -8,6 +8,8 @@ public class Shepherd : MonoBehaviour
     private GameController gameController;
     private Rigidbody rb;
     private Vector3? targetPosition;
+    
+    private RandomSfx randomSfx;
 
     // Start is called before the first frame update
     private void Start()
@@ -15,6 +17,7 @@ public class Shepherd : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
         animator = GetComponentInChildren<Animator>();
+        randomSfx = GetComponent<RandomSfx>();
     }
 
     // Update is called once per frame
@@ -42,7 +45,7 @@ public class Shepherd : MonoBehaviour
 
     public void Select()
     {
-        // Play sound ouaf
+        randomSfx.PlayRandomSfx();
         animator.SetBool("IsSelected", true);
         spriteSelected.enabled = true;
     }
