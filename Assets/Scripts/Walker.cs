@@ -21,7 +21,7 @@ public class Walker : MonoBehaviour
         if (rb.velocity.magnitude > 1f && !audioSource.isPlaying)
         {
             // Play footstep sound
-            audioSource.PlayOneShot(footstepSound);
+            audioSource.PlayOneShot(footstepSound, 0.2f);
         }
     }
 }
