@@ -12,6 +12,8 @@ public class Sheep : MonoBehaviour
     private List<Shepherd> shepherds;
     private SheepBehaviour sheepBehaviour;
 
+    public AudioClip EndSound;
+
     private Vector3? targetPosition;
 
     // Start is called before the first frame update
@@ -171,6 +173,7 @@ public class Sheep : MonoBehaviour
             animator.SetBool("IsRunning", false);
             idleTimer = 0;
             gameController.levelController.AddConfinedSheep();
+            GetComponent<AudioSource>().PlayOneShot(EndSound);
         }
     }
 }

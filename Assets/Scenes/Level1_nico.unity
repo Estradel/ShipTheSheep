@@ -1817,11 +1817,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep
       objectReference: {fileID: 0}
-    - target: {fileID: 8886119054524827353, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2440,12 +2435,12 @@ PrefabInstance:
     - target: {fileID: 1387790648515663263, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.022103274
+      value: 0.022103237
       objectReference: {fileID: 0}
     - target: {fileID: 1387790648515663263, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00521306
+      value: -0.005213051
       objectReference: {fileID: 0}
     - target: {fileID: 6763788939590776407, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
@@ -2501,6 +2496,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570778141863659841, guid: c4ccad883a601454f88dc42fa98ffdab,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -31.199951
       objectReference: {fileID: 0}
     - target: {fileID: 8672419550882933360, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}

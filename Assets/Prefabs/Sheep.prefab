@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6333344636124847323}
   - component: {fileID: 5115021648356331356}
   - component: {fileID: 4889336350815214373}
+  - component: {fileID: 5958337418470794985}
   m_Layer: 9
   m_Name: Sheep
   m_TagString: Sheep
@@ -210,6 +211,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0793cf1324c73426d96ea686291f2537, type: 3}
   - {fileID: 8300000, guid: 09f40e3f4a5ca4bf8bca21bcda3812b8, type: 3}
   - {fileID: 8300000, guid: 1af7885718ef942e298c1980e6c40caa, type: 3}
+--- !u!114 &5958337418470794985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365422026088251025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8725c8f2d0904707b60a02b32088c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepSound: {fileID: 8300000, guid: 761e5761fd5fa4f30895730632ea5755, type: 3}
 --- !u!1 &4718982043487505007
 GameObject:
   m_ObjectHideFlags: 0
@@ -5432,7 +5446,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
