@@ -172,6 +172,8 @@ public class LevelController : MonoBehaviour
         {
             time = -1;
         }
+        
+        SaveManager.Instance.SaveScoreIfBetterForLevel(levelDescriptor.levelName, nbSheep, time);
 
 
         // Grab a free Sequence to use
@@ -192,8 +194,6 @@ public class LevelController : MonoBehaviour
                 _audioSource.Play();
             }
             
-            SaveManager.Instance.SaveScoreIfBetterForLevel(levelDescriptor.levelName, nbSheep, time);
-
             endButtons.SetActive(true);
         }));
 

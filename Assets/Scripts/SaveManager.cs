@@ -19,8 +19,10 @@ public class SaveManager : MonoBehaviour
 
     public void SaveScoreIfBetterForLevel(string levelName, int score, int time)
     {
+
         int previousScore = GetScoreForLevel(levelName);
         int previousTime = GetTimeForLevel(levelName);
+
         if (time == -1)
         {
             if (previousTime == -1 && score >= previousScore)
@@ -31,7 +33,7 @@ public class SaveManager : MonoBehaviour
         }
         else
         {
-            if (time < previousTime || (time == previousTime && score >= previousScore))
+            if (time < previousTime || previousTime == -1)
             {
                 PlayerPrefs.SetInt(levelName, score);
                 PlayerPrefs.SetInt(levelName + "_time", time);
