@@ -25,7 +25,9 @@ public class SheepBehaviour : MonoBehaviour
     private void Start()
     {
         _randomSfx = GetComponent<RandomSfx>();
-        SetIdle();
+        SheepState = SHEEP_STATE.IDLE;
+        HappyParticles.SetActive(false);
+        FearParticles.SetActive(false);
     }
 
     public void PlayRandomSfx()
