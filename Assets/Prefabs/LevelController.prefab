@@ -2695,7 +2695,7 @@ MonoBehaviour:
   sheepInfoCounterCanvas: {fileID: 8570778141863659846}
   timeText: {fileID: 7808936083006350361}
   sheepCounterLeftText: {fileID: 8570778140424284063}
-  sheepCounterGoalText: {fileID: 0}
+  sheepCounterGoalText: {fileID: 5502812409490704227}
   introGameObject: {fileID: 5888467317744381472}
   endScreen: {fileID: 6201059009612965686}
   endSheepCounterText: {fileID: 30323601785290182}

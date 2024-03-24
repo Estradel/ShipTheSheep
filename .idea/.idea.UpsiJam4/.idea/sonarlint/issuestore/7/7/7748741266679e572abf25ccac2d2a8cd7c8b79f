@@ -1,16 +1,16 @@
 
-ycsharpsquid:S1125u"*Remove the unnecessary Boolean literal(s).(›Æ¼¦ÿÿÿÿÿ8ÂÔ–íæ1J$cdee9dcf-ac17-4c8d-b3d2-a6c4aca5c832
-—csharpsquid:S1155"GUse '.Any()' to test whether this 'IEnumerable<Sheep>' is empty or not.(íÈ‹’ùÿÿÿÿ8ÂÔ–íæ1J$0b7bf55f-9c63-4294-92fc-19efbd5a0922
-—csharpsquid:S1155æ"GUse '.Any()' to test whether this 'IEnumerable<Sheep>' is empty or not.(ñØøÑşÿÿÿÿ8ÄÔ–íæ1J$72503141-82c9-44df-9350-2b20d1096532
-kcsharpsquid:S2971B""Use 'Count' property here instead.( ª™$8ÄÔ–íæ1J$e96a65c9-f911-41b5-a6f7-db5e0dc8be73
-rcsharpsquid:S2971’""Use 'Count' property here instead.(ş¸—ıÿÿÿÿ8ÀÜÍ€ç1J$3111b851-623c-4d7a-8706-ce51d13e4117
-…csharpsquid:S2971æ"5Drop 'Where' and move the condition into the 'Count'.(ñØøÑşÿÿÿÿ8ÄÔ–íæ1J$7c1d9322-67c2-4f8f-a375-239b35737649
-…csharpsquid:S2971ç"5Drop 'Where' and move the condition into the 'Count'.(Ì¶‘åúÿÿÿÿ8ÄÔ–íæ1J$3eaa2f1c-dce5-4782-8eda-0833ac65be0e
-}csharpsquid:S3903	".Move 'LevelController' into a named namespace.(ğ«²´ÿÿÿÿÿ8ÄÔ–íæ1J$f00ba3b0-bf90-4d11-8cf5-18f92250f305
-Ècsharpsquid:S1186R"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(é¼”²şÿÿÿÿ8ÄÔ–íæ1J$914b9624-c31f-462d-8c1e-489429481744
-csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ãˆ±ø8ÄÔ–íæ1J$372a94ea-7706-477d-a763-dcccb30965d5
-¤csharpsquid:S2696["UMake the enclosing instance method 'static' or remove this set on the 'static' field.(ù€¾’ûÿÿÿÿ8ÄÔ–íæ1J$3a9b5044-0b2a-439d-b72c-efee3a1280d6
- csharpsquid:S2696‰"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(àªøã8ÄÔ–íæ1J$3ba9aa2a-08f5-4e67-a4dc-64b7c3208674
-mcsharpsquid:S125r"Remove this commented out code.(¿é¦‘üÿÿÿÿ8ÅÔ–íæ1J$2fa94344-3c2a-4c50-ae6a-562c60cd8062
-ncsharpsquid:S125˜"Remove this commented out code.(½…áùıÿÿÿÿ8Áñ¥€ç1J$8f079279-d750-4560-b811-d6572f1b24f9
-ncsharpsquid:S125¿"Remove this commented out code.(ß±³ëúÿÿÿÿ8ÅÔ–íæ1J$73fd3443-c54a-42ed-8783-c0e5159be596
+Scsharpsquid:S1125u"*Remove the unnecessary Boolean literal(s).(›Æ¼¦ÿÿÿÿÿ8Ëö€ç1
+qcsharpsquid:S1155"GUse '.Any()' to test whether this 'IEnumerable<Sheep>' is empty or not.(íÈ‹’ùÿÿÿÿ8Ëö€ç1
+qcsharpsquid:S1155æ"GUse '.Any()' to test whether this 'IEnumerable<Sheep>' is empty or not.(ñØøÑşÿÿÿÿ8Ëö€ç1
+Ecsharpsquid:S2971B""Use 'Count' property here instead.( ª™$8Ëö€ç1
+Lcsharpsquid:S2971’""Use 'Count' property here instead.(ş¸—ıÿÿÿÿ8Ëö€ç1
+_csharpsquid:S2971æ"5Drop 'Where' and move the condition into the 'Count'.(ñØøÑşÿÿÿÿ8Ëö€ç1
+_csharpsquid:S2971ç"5Drop 'Where' and move the condition into the 'Count'.(Ì¶‘åúÿÿÿÿ8Ëö€ç1
+}csharpsquid:S3903	".Move 'LevelController' into a named namespace.(ğ«²´ÿÿÿÿÿ8ÄÔ–íæ1J$4ee42a67-7efc-4e2f-b0da-8b3b986300f7
+¢csharpsquid:S1186R"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(é¼”²şÿÿÿÿ8‘Ëö€ç1
+csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ãˆ±ø8ÄÔ–íæ1J$10d1da51-6d2f-490c-8eb3-3e4612611a98
+~csharpsquid:S2696["UMake the enclosing instance method 'static' or remove this set on the 'static' field.(ù€¾’ûÿÿÿÿ8’Ëö€ç1
+zcsharpsquid:S2696‰"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(àªøã8’Ëö€ç1
+Gcsharpsquid:S125r"Remove this commented out code.(¿é¦‘üÿÿÿÿ8“Ëö€ç1
+Hcsharpsquid:S125˜"Remove this commented out code.(½…áùıÿÿÿÿ8“Ëö€ç1
+Hcsharpsquid:S125¿"Remove this commented out code.(ß±³ëúÿÿÿÿ8“Ëö€ç1
