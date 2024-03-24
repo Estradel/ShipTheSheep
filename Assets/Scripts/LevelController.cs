@@ -72,6 +72,9 @@ public class LevelController : MonoBehaviour
 
         _audioSource.clip = introMusic;
         _audioSource.Play();
+        
+        MainCamera = cameraAnimation;
+
 
         if (isLevelSatisfactory)
         {
@@ -81,7 +84,6 @@ public class LevelController : MonoBehaviour
             StartLevel();
         }
 
-        MainCamera = cameraAnimation;
 
     }
 
