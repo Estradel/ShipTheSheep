@@ -6,7 +6,10 @@ public class BillboardController : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        levelController = GameObject.FindWithTag("LevelController").GetComponent<LevelController>();
+        if (GameObject.FindWithTag("LevelController") != null)
+        {
+            levelController = GameObject.FindWithTag("LevelController").GetComponent<LevelController>();
+        }
     }
 
     // Update is called once per frame
