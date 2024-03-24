@@ -154,6 +154,12 @@ public class LevelController : MonoBehaviour
         winTitle.SetActive(false);
         loseTitle.SetActive(false);
 
+        int time = (int)(levelDescriptor.timeToComplete - timeRemaining);
+        if (!win)
+        {
+            time = -1;
+        }
+
 
         // Grab a free Sequence to use
         var mySequence = DOTween.Sequence();
@@ -172,8 +178,8 @@ public class LevelController : MonoBehaviour
                 _audioSource.clip = loseMusic;
                 _audioSource.Play();
             }
-
-            SaveManager.Instance.SaveScoreIfBetterForLevel(levelDescriptor.levelName, nbSheep, (int)(levelDescriptor.timeToComplete - timeRemaining));
+            
+            SaveManager.Instance.SaveScoreIfBetterForLevel(levelDescriptor.levelName, nbSheep, time);
 
             endButtons.SetActive(true);
         }));
