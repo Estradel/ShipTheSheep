@@ -5368,6 +5368,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Sandbox
       objectReference: {fileID: 0}
+    - target: {fileID: 1142842948445224516, guid: c5a6d73214e437248bea68ca94991a59,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1143275042487996929, guid: c5a6d73214e437248bea68ca94991a59,
         type: 3}
       propertyPath: m_IsActive
@@ -11425,6 +11430,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Level 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142842948445224516, guid: c5a6d73214e437248bea68ca94991a59,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1143275042487996929, guid: c5a6d73214e437248bea68ca94991a59,
         type: 3}
