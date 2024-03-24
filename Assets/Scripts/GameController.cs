@@ -74,8 +74,11 @@ public class GameController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            selectedShepherd.UnSelect();
-            selectedShepherd = null;
+            if (selectedShepherd != null)
+            {
+                selectedShepherd.UnSelect();
+                selectedShepherd = null;
+            }
         }
     }
 }
