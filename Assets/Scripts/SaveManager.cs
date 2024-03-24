@@ -37,6 +37,8 @@ public class SaveManager : MonoBehaviour
                 PlayerPrefs.SetInt(levelName + "_time", time);
             }
         }
+        PlayerPrefs.Save();
+
 
     }
 
