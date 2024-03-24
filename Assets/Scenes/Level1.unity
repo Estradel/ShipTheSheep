@@ -7314,12 +7314,12 @@ PrefabInstance:
     - target: {fileID: 1387790648515663263, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.022103237
+      value: 0.022103274
       objectReference: {fileID: 0}
     - target: {fileID: 1387790648515663263, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.005213051
+      value: -0.00521306
       objectReference: {fileID: 0}
     - target: {fileID: 1897333246297556085, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
@@ -7568,6 +7568,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelController
       objectReference: {fileID: 0}
+    - target: {fileID: 7120296699949487673, guid: c4ccad883a601454f88dc42fa98ffdab,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 25.166656
+      objectReference: {fileID: 0}
     - target: {fileID: 7352536085536913603, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: m_Mesh
@@ -7584,6 +7589,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2d11d4781221b934081c1f297161f371,
         type: 2}
+    - target: {fileID: 7991038974062052496, guid: c4ccad883a601454f88dc42fa98ffdab,
+        type: 3}
+      propertyPath: sheepCounterGoalText
+      value: 
+      objectReference: {fileID: 7515840729024923126}
     - target: {fileID: 8672419550882933360, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: _sun
@@ -7599,6 +7609,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ccad883a601454f88dc42fa98ffdab, type: 3}
+--- !u!114 &7515840729024923126 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5502812409490704227, guid: c4ccad883a601454f88dc42fa98ffdab,
+    type: 3}
+  m_PrefabInstance: {fileID: 7515840729024923125}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8109453478390107208
 PrefabInstance:
   m_ObjectHideFlags: 0

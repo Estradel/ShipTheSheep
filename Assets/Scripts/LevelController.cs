@@ -26,6 +26,7 @@ public class LevelController : MonoBehaviour
 
     [Header("IntroScreen")] [SerializeField]
     private TMP_Text sheepCounterLeftText;
+    [SerializeField] private TMP_Text sheepCounterGoalText;
 
     [SerializeField] private GameObject introGameObject;
 
@@ -61,6 +62,8 @@ public class LevelController : MonoBehaviour
         introGameObject.SetActive(true);
         levelUI.SetActive(false);
         endScreen.SetActive(false);
+
+        sheepCounterGoalText.text = gameController.Sheeps.Count().ToString();
 
         _audioSource.clip = introMusic;
         _audioSource.Play();
