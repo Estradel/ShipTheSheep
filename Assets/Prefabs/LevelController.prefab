@@ -2349,10 +2349,10 @@ MonoBehaviour:
   winTitle: {fileID: 2528908857109498739}
   loseTitle: {fileID: 1313348257989862519}
   endButtons: {fileID: 1312087173286542090}
-  introMusic: {fileID: 8300000, guid: eae115954f765a9448eac5e39003bf6c, type: 3}
+  introMusic: {fileID: 8300000, guid: 7b481540e2ad96e47ba521eb4eab4f64, type: 3}
   levelMusic: {fileID: 8300000, guid: 560004bd6493f4b428531283fa7aa8d2, type: 3}
-  winMusic: {fileID: 8300000, guid: eae115954f765a9448eac5e39003bf6c, type: 3}
-  loseMusic: {fileID: 8300000, guid: eae115954f765a9448eac5e39003bf6c, type: 3}
+  winMusic: {fileID: 8300000, guid: 837f8c14232aa489da78e62143d993d6, type: 3}
+  loseMusic: {fileID: 8300000, guid: 385ef1b9bd3d34d7f81b2a14e22e14d1, type: 3}
 --- !u!114 &8672419550882933360
 MonoBehaviour:
   m_ObjectHideFlags: 0

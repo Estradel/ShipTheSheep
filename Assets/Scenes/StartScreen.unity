@@ -11755,7 +11755,7 @@ PrefabInstance:
         type: 3}
       propertyPath: LevelDescriptor
       value: 
-      objectReference: {fileID: 11400000, guid: f15c6eeace47c1f47ad60b3d0505cdb7,
+      objectReference: {fileID: 11400000, guid: 222b77ebbb70f124693bc63f2be81af6,
         type: 2}
     - target: {fileID: 742669057862847068, guid: c5a6d73214e437248bea68ca94991a59,
         type: 3}
@@ -19782,41 +19782,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level1_SelectionButton
       objectReference: {fileID: 0}
-    - target: {fileID: 8974455290207635419, guid: c5a6d73214e437248bea68ca94991a59,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8974455290207635419, guid: c5a6d73214e437248bea68ca94991a59,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8974455290207635419, guid: c5a6d73214e437248bea68ca94991a59,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 630599451474742106}
-    - target: {fileID: 8974455290207635419, guid: c5a6d73214e437248bea68ca94991a59,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8974455290207635419, guid: c5a6d73214e437248bea68ca94991a59,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayRandomSfxNow
-      objectReference: {fileID: 0}
-    - target: {fileID: 8974455290207635419, guid: c5a6d73214e437248bea68ca94991a59,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: RandomSfx, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8974455290207635419, guid: c5a6d73214e437248bea68ca94991a59,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 9177172236624744963, guid: c5a6d73214e437248bea68ca94991a59,
         type: 3}
       propertyPath: sfxClips.Array.data[0]
@@ -19847,18 +19812,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5a6d73214e437248bea68ca94991a59, type: 3}
---- !u!114 &630599451474742106 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9177172236624744963, guid: c5a6d73214e437248bea68ca94991a59,
-    type: 3}
-  m_PrefabInstance: {fileID: 630599451474742105}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d183140c77a7a44a50ca9122c83cd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3453781258106695607
 PrefabInstance:
   m_ObjectHideFlags: 0
