@@ -1,15 +1,15 @@
 
-Scsharpsquid:S1125m"*Remove the unnecessary Boolean literal(s).(›Æ¼¦ÿÿÿÿÿ8ÂÔ–íæ1
-qcsharpsquid:S1155†"GUse '.Any()' to test whether this 'IEnumerable<Sheep>' is empty or not.(íÈ‹’ùÿÿÿÿ8ÂÔ–íæ1
-qcsharpsquid:S1155Ö"GUse '.Any()' to test whether this 'IEnumerable<Sheep>' is empty or not.(ñØøÑşÿÿÿÿ8ÄÔ–íæ1
-Lcsharpsquid:S2971ˆ""Use 'Count' property here instead.(ş¸—ıÿÿÿÿ8ÄÔ–íæ1
-_csharpsquid:S2971Õ"5Drop 'Where' and move the condition into the 'Count'.(Û†³ıÿÿÿÿ8ÄÔ–íæ1
-_csharpsquid:S2971Ö"5Drop 'Where' and move the condition into the 'Count'.(ñØøÑşÿÿÿÿ8ÄÔ–íæ1
-_csharpsquid:S2971×"5Drop 'Where' and move the condition into the 'Count'.(Ì¶‘åúÿÿÿÿ8ÄÔ–íæ1
-Wcsharpsquid:S3903".Move 'LevelController' into a named namespace.(ğ«²´ÿÿÿÿÿ8ÄÔ–íæ1
-¢csharpsquid:S1186J"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(é¼”²şÿÿÿÿ8ÄÔ–íæ1
-hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ãˆ±ø8ÄÔ–íæ1
-~csharpsquid:S2696S"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(ù€¾’ûÿÿÿÿ8ÄÔ–íæ1
-zcsharpsquid:S2696…"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(àªøã8ÄÔ–íæ1
-Gcsharpsquid:S125j"Remove this commented out code.(¿é¦‘üÿÿÿÿ8ÅÔ–íæ1
-Hcsharpsquid:S125­"Remove this commented out code.(ß±³ëúÿÿÿÿ8ÅÔ–íæ1
+Scsharpsquid:S1125r"*Remove the unnecessary Boolean literal(s).(›Æ¼¦ÿÿÿÿÿ8ÂÔ–íæ1
+qcsharpsquid:S1155"GUse '.Any()' to test whether this 'IEnumerable<Sheep>' is empty or not.(íÈ‹’ùÿÿÿÿ8ÂÔ–íæ1
+qcsharpsquid:S1155ã"GUse '.Any()' to test whether this 'IEnumerable<Sheep>' is empty or not.(ñØøÑşÿÿÿÿ8ÄÔ–íæ1
+Lcsharpsquid:S2971""Use 'Count' property here instead.(ş¸—ıÿÿÿÿ8ÄÔ–íæ1
+_csharpsquid:S2971ã"5Drop 'Where' and move the condition into the 'Count'.(ñØøÑşÿÿÿÿ8ÄÔ–íæ1
+_csharpsquid:S2971ä"5Drop 'Where' and move the condition into the 'Count'.(Ì¶‘åúÿÿÿÿ8ÄÔ–íæ1
+Wcsharpsquid:S3903	".Move 'LevelController' into a named namespace.(ğ«²´ÿÿÿÿÿ8ÄÔ–íæ1
+¢csharpsquid:S1186O"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(é¼”²şÿÿÿÿ8ÄÔ–íæ1
+hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ãˆ±ø8ÄÔ–íæ1
+~csharpsquid:S2696X"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(ù€¾’ûÿÿÿÿ8ÄÔ–íæ1
+zcsharpsquid:S2696†"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(àªøã8ÄÔ–íæ1
+Gcsharpsquid:S125o"Remove this commented out code.(¿é¦‘üÿÿÿÿ8ÅÔ–íæ1
+Hcsharpsquid:S125•"Remove this commented out code.(½…áùıÿÿÿÿ8Áñ¥€ç1
+Hcsharpsquid:S125¼"Remove this commented out code.(ß±³ëúÿÿÿÿ8ÅÔ–íæ1
