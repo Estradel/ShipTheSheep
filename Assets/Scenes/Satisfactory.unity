@@ -9636,18 +9636,33 @@ PrefabInstance:
     - target: {fileID: 1387790648515663263, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.022103274
+      value: 0.022103237
       objectReference: {fileID: 0}
     - target: {fileID: 1387790648515663263, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00521306
+      value: -0.005213051
       objectReference: {fileID: 0}
     - target: {fileID: 1897333246297556085, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 620557352}
+    - target: {fileID: 2539574310637023746, guid: c4ccad883a601454f88dc42fa98ffdab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539574310637023746, guid: c4ccad883a601454f88dc42fa98ffdab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.043
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539574310637023746, guid: c4ccad883a601454f88dc42fa98ffdab,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.933
+      objectReference: {fileID: 0}
     - target: {fileID: 5888467317744381472, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: m_IsActive
@@ -9718,6 +9733,12 @@ PrefabInstance:
       propertyPath: timeToComplete
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 7991038974062052496, guid: c4ccad883a601454f88dc42fa98ffdab,
+        type: 3}
+      propertyPath: levelDescriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: 27633ff0e94b74e47aed1ec3b96be407,
+        type: 2}
     - target: {fileID: 7991038974062052496, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: isLevelSatisfactory
