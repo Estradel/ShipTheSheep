@@ -1,6 +1,8 @@
 using System.Linq;
 using DefaultNamespace;
 using DG.Tweening;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 using TMPro;
 using UnityEngine;
 
@@ -17,7 +19,8 @@ public class LevelController : MonoBehaviour
 
     [Header("LevelScreen")] [SerializeField]
     private GameObject levelUI;
-    
+    [SerializeField]
+    private GameObject sheepInfoCounterCanvas;
 
     [SerializeField] private TMP_Text timeText;
 
@@ -45,6 +48,8 @@ public class LevelController : MonoBehaviour
 
     private GameController gameController;
     private bool isLastSeconds;
+
+    private TweenerCore<float,float,FloatOptions> timer;
 
     // Start is called before the first frame update
     private void Start()
@@ -100,7 +105,7 @@ public class LevelController : MonoBehaviour
 
         _timeOfDayController.StartDay(levelDescriptor.timeToComplete);
 
-        DOTween.To(() => timeRemaining, x => timeRemaining = x, 0, levelDescriptor.timeToComplete).SetEase(Ease.Linear)
+        timer = DOTween.To(() => timeRemaining, x => timeRemaining = x, 0, levelDescriptor.timeToComplete).SetEase(Ease.Linear)
             .OnUpdate(() =>
             {
                 // Debug.Log(timeRemaining);
@@ -116,10 +121,6 @@ public class LevelController : MonoBehaviour
                 _timeOfDayController.UpdateTime(timeRemaining);
             }).OnComplete(() =>
             {
-                isLastSeconds = false;
-                timeText.DOKill();
-                timeText.transform.DOKill();
-
                 ShowEndScreen();
             });
 
@@ -131,6 +132,12 @@ public class LevelController : MonoBehaviour
     private void ShowEndScreen()
     {
         GameController.STATE = State.Pause;
+        
+        isLastSeconds = false;
+        timeText.DOKill();
+        timeText.transform.DOKill();
+        timer.Kill();
+        
         var win = gameController.Sheeps.Count(sheep => !sheep.isConfined) == 0;
         var nbSheep = gameController.Sheeps.Count(sheep => sheep.isConfined);
         var totalSheep = gameController.Sheeps.Count();
@@ -139,7 +146,9 @@ public class LevelController : MonoBehaviour
 
         _audioSource.Stop();
         introGameObject.SetActive(false);
-        levelUI.SetActive(false);
+        //levelUI.SetActive(false);
+        sheepInfoCounterCanvas.SetActive(false);
+        
         endScreen.SetActive(true);
         endButtons.SetActive(false);
         winTitle.SetActive(false);
@@ -209,8 +218,6 @@ public class LevelController : MonoBehaviour
 
     public void AddConfinedSheep()
     {
-        Debug.Log("AddConfined");
-        Debug.Log(gameController.Sheeps.Where(sheep => !sheep.isConfined).Count());
         if (gameController.Sheeps.Where(sheep => !sheep.isConfined).Count() == 0) ShowEndScreen();
         sheepCounterLeftText.text = gameController.Sheeps.Where(sheep => !sheep.isConfined).Count() + "";
     }
