@@ -7620,15 +7620,14 @@ PrefabInstance:
       objectReference: {fileID: 1973376055}
     - target: {fileID: 7991038974062052496, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
+      propertyPath: cameraGame
+      value: 
+      objectReference: {fileID: 416753185}
+    - target: {fileID: 7991038974062052496, guid: c4ccad883a601454f88dc42fa98ffdab,
+        type: 3}
       propertyPath: timeToComplete
       value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 7991038974062052496, guid: c4ccad883a601454f88dc42fa98ffdab,
-        type: 3}
-      propertyPath: levelDescriptor
-      value: 
-      objectReference: {fileID: 11400000, guid: 2d11d4781221b934081c1f297161f371,
-        type: 2}
     - target: {fileID: 8672419550882933360, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: _sun

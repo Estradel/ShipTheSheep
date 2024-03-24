@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class BillboardController : MonoBehaviour
 {
-    public Camera mainCamera;
+    private LevelController levelController;
     // Start is called before the first frame update
     private void Start()
     {
-        mainCamera = Camera.main;
+        levelController = GameObject.FindWithTag("LevelController").GetComponent<LevelController>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        transform.forward = mainCamera.transform.forward;
+        transform.forward = levelController.MainCamera.transform.forward;
     }
 }

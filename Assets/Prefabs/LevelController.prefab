@@ -2707,6 +2707,8 @@ MonoBehaviour:
   levelMusic: {fileID: 8300000, guid: 560004bd6493f4b428531283fa7aa8d2, type: 3}
   winMusic: {fileID: 8300000, guid: 837f8c14232aa489da78e62143d993d6, type: 3}
   loseMusic: {fileID: 8300000, guid: 385ef1b9bd3d34d7f81b2a14e22e14d1, type: 3}
+  cameraAnimation: {fileID: 5856514204701640496}
+  cameraGame: {fileID: 0}
 --- !u!114 &8672419550882933360
 MonoBehaviour:
   m_ObjectHideFlags: 0
