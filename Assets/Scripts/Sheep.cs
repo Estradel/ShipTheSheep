@@ -36,7 +36,7 @@ public class Sheep : MonoBehaviour
             if (targetPosition.HasValue)
             {
                 var direction = targetPosition.Value - transform.position;
-                rb.velocity = direction.normalized * gameController.ShepherdVelocity;
+                rb.velocity = direction.normalized * gameController.SheepVelocity;
                 animator.SetBool("IsRunning", true);
                 if (Vector3.Distance(transform.position, targetPosition.Value) < 0.8f)
                 {

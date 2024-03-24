@@ -48,7 +48,7 @@ MonoBehaviour:
   PerceptionRadius: 10
   SeparationDistance: 1
   ShepherdPerceptionRadius: 10
-  FlocCenterForce: 0.01
+  FlocCenterForce: 0.02
   MatchVelocityForce: 0.1
   AvoidanceForce: 0.1
   ShepherdVelocity: 10
