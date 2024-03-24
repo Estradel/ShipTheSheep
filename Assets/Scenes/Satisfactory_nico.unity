@@ -186,6 +186,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_6
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -401,6 +406,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_8
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -560,6 +570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -734,6 +749,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1808,6 +1828,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_3
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2224,6 +2249,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_2
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2472,6 +2502,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2714,6 +2749,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2782,6 +2822,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_5
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2849,6 +2894,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3135,6 +3185,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_8
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3208,6 +3263,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3457,6 +3517,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_9
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3536,6 +3601,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3716,6 +3786,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4107,6 +4182,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_6
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4451,6 +4531,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4992,6 +5077,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_6
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5210,6 +5300,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5565,6 +5660,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_5
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5638,6 +5738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6098,6 +6203,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_8
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6166,6 +6276,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_7
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6233,6 +6348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6550,6 +6670,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_8
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6617,6 +6742,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6847,6 +6977,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_4
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6914,6 +7049,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7210,6 +7350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7527,6 +7672,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_9
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7600,6 +7750,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7780,6 +7935,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7971,6 +8131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8207,6 +8372,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_7
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8286,6 +8456,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8683,6 +8858,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_3
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8768,6 +8948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9109,6 +9294,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_6
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9289,6 +9479,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_5
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9357,6 +9552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_9
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9424,6 +9624,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9499,6 +9704,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_5
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9566,6 +9776,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9688,6 +9903,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9755,6 +9975,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10178,6 +10403,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_2
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10245,6 +10475,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10320,6 +10555,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_5
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10387,6 +10627,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10860,6 +11105,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_3
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11188,6 +11438,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11261,6 +11516,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11910,6 +12170,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_7
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12461,6 +12726,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12653,6 +12923,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12826,6 +13101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_9
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12899,6 +13179,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13242,6 +13527,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_2
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13452,6 +13742,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep_3
       objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13637,6 +13932,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288890133525319625, guid: fce1110b522d74a7b87a5fa3a0a3dd91,
+        type: 3}
+      propertyPath: isWhite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
