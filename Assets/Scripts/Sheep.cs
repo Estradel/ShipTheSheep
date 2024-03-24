@@ -10,6 +10,7 @@ public class Sheep : MonoBehaviour
     private float idleTimer;
     private Rigidbody rb;
     private List<Shepherd> shepherds;
+    private SheepBehaviour sheepBehaviour;
 
     private Vector3? targetPosition;
 
@@ -17,6 +18,7 @@ public class Sheep : MonoBehaviour
     private void Start()
     {
         gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+        sheepBehaviour = GetComponent<SheepBehaviour>();
         shepherds = gameController.Shepherds;
 
         rb = GetComponent<Rigidbody>();
@@ -70,6 +72,7 @@ public class Sheep : MonoBehaviour
             var numNeighborsAvoidOthers = 0;
             var numNeighborsAverageVelocity = 0;
 
+            bool isScared = false;
             // Flees from the shepherds
             foreach (var shepherd in shepherds)
             {
@@ -77,38 +80,47 @@ public class Sheep : MonoBehaviour
                 var distance = direction.magnitude;
                 if (distance < gameController.ShepherdPerceptionRadius)
                     shepherdForce += direction.normalized * (gameController.ShepherdPerceptionRadius - distance);
+
+                if (distance < 4)
+                {
+                    sheepBehaviour.SetScared();
+                    isScared = true;
+                }
             }
 
+            if (!isScared)
+            {
+                sheepBehaviour.SetIdle();
+            }
 
-            if (shepherdForce == Vector3.zero || true) // Only align when no shepherd (a bit more chaotic)
                 foreach (var sheep in gameController.Sheeps)
+            {
+                if (sheep == this || sheep.isConfined) continue;
+
+                // Go the center of the flock
+                if (Vector3.Distance(transform.position, sheep.transform.position) <
+                    gameController.PerceptionRadius)
                 {
-                    if (sheep == this || sheep.isConfined) continue;
-
-                    // Go the center of the flock
-                    if (Vector3.Distance(transform.position, sheep.transform.position) <
-                        gameController.PerceptionRadius)
-                    {
-                        flockCenter += sheep.transform.position;
-                        numNeighborsFlockCenter++;
-                    }
-
-                    // Avoid others
-                    if (Vector3.Distance(transform.position, sheep.transform.position) <
-                        gameController.SeparationDistance)
-                    {
-                        avoidanceForce += (transform.position - sheep.transform.position).normalized;
-                        numNeighborsAvoidOthers++;
-                    }
-
-                    // Match velocity
-                    if (Vector3.Distance(transform.position, sheep.transform.position) <
-                        gameController.PerceptionRadius)
-                    {
-                        averageVelocity += sheep.rb.velocity;
-                        numNeighborsAverageVelocity++;
-                    }
+                    flockCenter += sheep.transform.position;
+                    numNeighborsFlockCenter++;
                 }
+
+                // Avoid others
+                if (Vector3.Distance(transform.position, sheep.transform.position) <
+                    gameController.SeparationDistance)
+                {
+                    avoidanceForce += (transform.position - sheep.transform.position).normalized;
+                    numNeighborsAvoidOthers++;
+                }
+
+                // Match velocity
+                if (Vector3.Distance(transform.position, sheep.transform.position) <
+                    gameController.PerceptionRadius)
+                {
+                    averageVelocity += sheep.rb.velocity;
+                    numNeighborsAverageVelocity++;
+                }
+            }
 
             force += shepherdForce;
 
@@ -153,6 +165,7 @@ public class Sheep : MonoBehaviour
     {
         if (!isConfined)
         {
+            sheepBehaviour.SetHappy();
             isConfined = true;
             rb.velocity = Vector3.zero;
             animator.SetBool("IsRunning", false);
