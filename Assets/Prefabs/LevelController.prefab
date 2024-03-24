@@ -983,7 +983,7 @@ Transform:
   m_GameObject: {fileID: 1919143312872741481}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0046879943, y: -0.29863167, z: 0.0011237337, w: -0.9543563}
-  m_LocalPosition: {x: 29.847841, y: 184.9549, z: -333.17886}
+  m_LocalPosition: {x: -3.92, y: 1.043, z: 15.933}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2340,6 +2340,7 @@ MonoBehaviour:
   btnBackSatisfactory: {fileID: 6253492157459708582}
   timeRemaining: 0
   levelUI: {fileID: 8570778140700781621}
+  sheepInfoCounterCanvas: {fileID: 8570778141863659846}
   timeText: {fileID: 7808936083006350361}
   sheepCounterLeftText: {fileID: 8570778140424284063}
   introGameObject: {fileID: 5888467317744381472}
@@ -3860,6 +3861,12 @@ RectTransform:
 --- !u!224 &8570778141863659841 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7684445922777535236, guid: 7fc46484abed75343993a6fc4c08262f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2041581527802698309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8570778141863659846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7684445922777535235, guid: 7fc46484abed75343993a6fc4c08262f,
     type: 3}
   m_PrefabInstance: {fileID: 2041581527802698309}
   m_PrefabAsset: {fileID: 0}
