@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isConfined: 0
-  EndSound: {fileID: 0}
+  EndSound: {fileID: 8300000, guid: a034a47dab8c54ee486ddb34ff21e8a1, type: 3}
 --- !u!114 &6333344636124847323
 MonoBehaviour:
   m_ObjectHideFlags: 0

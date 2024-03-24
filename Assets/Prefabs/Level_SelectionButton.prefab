@@ -525,7 +525,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -623,11 +623,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxClips:
-  - {fileID: 8300000, guid: edfb3f7e581160d498ff42668ede6da9, type: 3}
-  - {fileID: 8300000, guid: 9dfcd31472dfded419b2b19ad0122921, type: 3}
-  - {fileID: 8300000, guid: fbd35a6b08f075c4a8fbd5e8e17316ce, type: 3}
-  - {fileID: 8300000, guid: 6217969d02bfd0844a44517296cbc9b8, type: 3}
-  - {fileID: 8300000, guid: 49c07e4e1ecc8f3479825e1f5879ccbd, type: 3}
+  - {fileID: 8300000, guid: 8f243b76915cf4316aec5afea63fc397, type: 3}
+  - {fileID: 8300000, guid: f0988640395f84f11b34dfe2ae89b68b, type: 3}
+  - {fileID: 8300000, guid: 9f65dd84e0167436f91a8199949a7a11, type: 3}
+  - {fileID: 8300000, guid: 0793cf1324c73426d96ea686291f2537, type: 3}
+  - {fileID: 8300000, guid: 09f40e3f4a5ca4bf8bca21bcda3812b8, type: 3}
 --- !u!114 &5101111904715655177
 MonoBehaviour:
   m_ObjectHideFlags: 0

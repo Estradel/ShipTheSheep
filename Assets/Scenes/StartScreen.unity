@@ -19738,31 +19738,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level1_SelectionButton
       objectReference: {fileID: 0}
-    - target: {fileID: 9177172236624744963, guid: c5a6d73214e437248bea68ca94991a59,
-        type: 3}
-      propertyPath: sfxClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 8f243b76915cf4316aec5afea63fc397, type: 3}
-    - target: {fileID: 9177172236624744963, guid: c5a6d73214e437248bea68ca94991a59,
-        type: 3}
-      propertyPath: sfxClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: f0988640395f84f11b34dfe2ae89b68b, type: 3}
-    - target: {fileID: 9177172236624744963, guid: c5a6d73214e437248bea68ca94991a59,
-        type: 3}
-      propertyPath: sfxClips.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 9f65dd84e0167436f91a8199949a7a11, type: 3}
-    - target: {fileID: 9177172236624744963, guid: c5a6d73214e437248bea68ca94991a59,
-        type: 3}
-      propertyPath: sfxClips.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 0793cf1324c73426d96ea686291f2537, type: 3}
-    - target: {fileID: 9177172236624744963, guid: c5a6d73214e437248bea68ca94991a59,
-        type: 3}
-      propertyPath: sfxClips.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: 09f40e3f4a5ca4bf8bca21bcda3812b8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

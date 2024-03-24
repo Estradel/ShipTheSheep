@@ -173,7 +173,7 @@ public class LevelController : MonoBehaviour
                 _audioSource.Play();
             }
 
-            SaveManager.Instance.SaveScoreForLevel(levelDescriptor.levelName, nbSheep);
+            SaveManager.Instance.SaveScoreForLevel(levelDescriptor.levelName, nbSheep, (int)(levelDescriptor.timeToComplete - timeRemaining));
 
             endButtons.SetActive(true);
         }));
