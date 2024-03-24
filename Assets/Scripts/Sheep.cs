@@ -16,6 +16,8 @@ public class Sheep : MonoBehaviour
 
     private Vector3? targetPosition;
 
+    public bool isWhite = true;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -25,6 +27,11 @@ public class Sheep : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
+
+        if (isWhite)
+        {
+            animator.runtimeAnimatorController = Resources.Load("SheepAnimatorAlt") as RuntimeAnimatorController;
+        }
     }
 
     // Update is called once per frame
