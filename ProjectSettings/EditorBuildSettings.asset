@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level5.unity
     guid: 09ef40b5a7642fe4ba1fb2ae23c2d21b
+  - enabled: 1
+    path: Assets/Scenes/Satisfactory_nico.unity
+    guid: c56680bd206454c33a53924baaa3c7d5
   m_configObjects: {}
