@@ -75,7 +75,7 @@ public class SheepBehaviour : MonoBehaviour
         SheepState = SHEEP_STATE.WALKING;
         HappyParticles.SetActive(false);
         FearParticles.SetActive(false);
-        //PlayRandomSfx();
+        PlayRandomSfx();
     }
 
     public void SetDead()
