@@ -12,6 +12,11 @@ public class BillboardController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (levelController == null || levelController.MainCamera == null)
+        {
+            transform.forward = Camera.main.transform.forward;
+            return;
+        }
         transform.forward = levelController.MainCamera.transform.forward;
     }
 }
