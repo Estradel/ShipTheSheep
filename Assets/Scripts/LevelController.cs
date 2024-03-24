@@ -49,6 +49,11 @@ public class LevelController : MonoBehaviour
     private GameController gameController;
     private bool isLastSeconds;
 
+    [System.NonSerialized] public Camera MainCamera;
+
+    public Camera cameraAnimation;
+    public Camera cameraGame;
+
     private TweenerCore<float,float,FloatOptions> timer;
 
     // Start is called before the first frame update
@@ -73,6 +78,8 @@ public class LevelController : MonoBehaviour
             StartLevel();
         }
 
+        MainCamera = cameraAnimation;
+
     }
 
     // Update is called once per frame
@@ -82,7 +89,8 @@ public class LevelController : MonoBehaviour
 
     public void StartLevel()
     {
-        
+        MainCamera = cameraGame;
+
         _audioSource.clip = levelMusic;
         _audioSource.Play();
         GameController.STATE = State.Play;
