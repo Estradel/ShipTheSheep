@@ -13727,12 +13727,12 @@ PrefabInstance:
     - target: {fileID: 1387790648515663263, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.022103274
+      value: 0.022103237
       objectReference: {fileID: 0}
     - target: {fileID: 1387790648515663263, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00521306
+      value: -0.005213051
       objectReference: {fileID: 0}
     - target: {fileID: 1897333246297556085, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
@@ -13824,6 +13824,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1973376055}
+    - target: {fileID: 7991038974062052496, guid: c4ccad883a601454f88dc42fa98ffdab,
+        type: 3}
+      propertyPath: levelMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b481540e2ad96e47ba521eb4eab4f64, type: 3}
     - target: {fileID: 7991038974062052496, guid: c4ccad883a601454f88dc42fa98ffdab,
         type: 3}
       propertyPath: timeToComplete
@@ -17491,7 +17496,7 @@ PrefabInstance:
     - target: {fileID: 7108744621600418644, guid: b4901245e4719ba44a19f12d10af9341,
         type: 3}
       propertyPath: m_DrawTreesAndFoliage
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7704453192835426747, guid: b4901245e4719ba44a19f12d10af9341,
         type: 3}
