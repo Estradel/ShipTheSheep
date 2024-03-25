@@ -167,13 +167,16 @@ public class LevelController : MonoBehaviour
         winTitle.SetActive(false);
         loseTitle.SetActive(false);
 
-        int time = (int)(levelDescriptor.timeToComplete - timeRemaining);
+        float time = levelDescriptor.timeToComplete - timeRemaining;
         if (!win)
         {
             time = -1;
         }
-        
-        SaveManager.Instance.SaveScoreIfBetterForLevel(levelDescriptor.levelName, nbSheep, time);
+
+        if (SaveManager.Instance != null)
+        {
+            SaveManager.Instance.SaveScoreIfBetterForLevel(levelDescriptor.levelName, nbSheep, time);
+        }
 
 
         // Grab a free Sequence to use

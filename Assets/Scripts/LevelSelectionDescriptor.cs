@@ -16,13 +16,13 @@ public class LevelSelectionDescriptor : MonoBehaviour
         scoreText.text = score.ToString();
         
         var time = SaveManager.Instance.GetTimeForLevel(LevelDescriptor.levelName);
-        if (time == -1)
+        if (time < 0)
         {
             scoreText.text = score.ToString();
         }
         else
         {
-            scoreText.text = score+  $" ({time / 60:00}:{time % 60:00})";;
+            scoreText.text = score + $"\n({(int)time / 60:00}:{(int)time % 60:00}.{(int)((decimal)time % 1 * 1000):000})";
         }
     }
 

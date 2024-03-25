@@ -17,26 +17,26 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public void SaveScoreIfBetterForLevel(string levelName, int score, int time)
+    public void SaveScoreIfBetterForLevel(string levelName, int score, float time)
     {
 
         int previousScore = GetScoreForLevel(levelName);
-        int previousTime = GetTimeForLevel(levelName);
+        float previousTime = GetTimeForLevel(levelName);
 
-        if (time == -1)
+        if (time < 0)
         {
-            if (previousTime == -1 && score >= previousScore)
+            if (previousTime < 0 && score >= previousScore)
             {
                 PlayerPrefs.SetInt(levelName, score);
-                PlayerPrefs.SetInt(levelName + "_time", time);
+                PlayerPrefs.SetFloat(levelName + "_time", time);
             }
         }
         else
         {
-            if (time < previousTime || previousTime == -1)
+            if (time < previousTime || previousTime < 0)
             {
                 PlayerPrefs.SetInt(levelName, score);
-                PlayerPrefs.SetInt(levelName + "_time", time);
+                PlayerPrefs.SetFloat(levelName + "_time", time);
             }
         }
         PlayerPrefs.Save();
@@ -49,9 +49,9 @@ public class SaveManager : MonoBehaviour
         // Get the score for the level
         return PlayerPrefs.GetInt(levelName, 0);
     }
-    public int GetTimeForLevel(string levelName)
+    public float GetTimeForLevel(string levelName)
     {
-        return PlayerPrefs.GetInt(levelName + "_time", -1);
+        return PlayerPrefs.GetFloat(levelName + "_time", -1);
     }
 
     public void ResetScoreForLevel(string levelName)

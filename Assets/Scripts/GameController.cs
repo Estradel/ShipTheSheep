@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -52,12 +53,12 @@ public class GameController : MonoBehaviour
             var raycastHits = Physics.RaycastAll(ray, 100f);
             var hasTouchedShepherd = false;
             foreach (var raycastHit in raycastHits)
-                if (raycastHit.transform != null && raycastHit.transform.gameObject.CompareTag("Shepherd"))
+                if (raycastHit.transform != null && raycastHit.transform.gameObject.CompareTag("Shepherd") && raycastHit.transform.gameObject.GetComponent<Shepherd>() != selectedShepherd)
                     hasTouchedShepherd = true;
             foreach (var raycastHit in raycastHits)
                 if (raycastHit.transform != null)
                 {
-                    if (raycastHit.transform.gameObject.CompareTag("Shepherd"))
+                    if (raycastHit.transform.gameObject.CompareTag("Shepherd") && raycastHit.transform.gameObject.GetComponent<Shepherd>() != selectedShepherd)
                     {
                         if (selectedShepherd != null) selectedShepherd.UnSelect();
 
@@ -79,6 +80,79 @@ public class GameController : MonoBehaviour
                 selectedShepherd.UnSelect();
                 selectedShepherd = null;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            levelController.Back();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Tab))
+        {
+            int index = 0;
+            if (selectedShepherd != null)
+            {
+                selectedShepherd.UnSelect();
+                index = Shepherds.IndexOf(selectedShepherd);
+            }
+
+            selectedShepherd = Shepherds[(index + 1) % Shepherds.Count];
+            selectedShepherd.Select();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            selectShepherd(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            selectShepherd(2);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            selectShepherd(3);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            selectShepherd(4);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            selectShepherd(5);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            selectShepherd(6);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            selectShepherd(7);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            selectShepherd(8);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            selectShepherd(9);
+        }
+    }
+
+    private void selectShepherd(int index)
+    {
+        if (Shepherds.Count >= index)
+        {
+            if (selectedShepherd != null)
+            {
+                selectedShepherd.UnSelect();
+            }
+
+            selectedShepherd = Shepherds[index - 1];
+            selectedShepherd.Select();
         }
     }
 }
